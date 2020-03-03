@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class FoodSearchComponent implements OnInit {
   myControl = new FormControl();
-  options: string[] = ["Kolkata", "Mumbai", "Delhi"];
+  options: string[] = ["Kolkata", "Mumbai", "Delhi", "Chennai", "Bangalore", "Jaipur"];
 
   constructor() {}
 

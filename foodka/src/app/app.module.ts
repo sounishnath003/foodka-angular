@@ -11,6 +11,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeCardsComponent } from './homeCards/homeCards.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SigninComponent } from './signin/signin.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
    declarations: [
@@ -18,7 +20,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       NavbarComponent,
       FoodSearchComponent,
       HomeCardsComponent,
-      FooterComponent
+      FooterComponent,
+      SigninComponent,
+      HomeComponent
    ],
    imports: [
       FormsModule,
