@@ -2,7 +2,7 @@
 This is a project food ordering app for industrial tranning purpose made with Angular
 
 
-[![Foodka|Angular](../../project/foodka-angular/foodka/src/assets/initStage.png)](https://github.com/sounishnath003/foodka-angular)
+[![Foodka|Angular](../../project/foodka-angular/foodka/src/assets/initStage.jpeg)](https://github.com/sounishnath003/foodka-angular)
 
 # Foodka
 
