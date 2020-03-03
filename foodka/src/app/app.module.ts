@@ -9,13 +9,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FoodSearchComponent } from './foodSearch/foodSearch.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeCardsComponent } from './homeCards/homeCards.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavbarComponent,
       FoodSearchComponent,
-      HomeCardsComponent
+      HomeCardsComponent,
+      FooterComponent
    ],
    imports: [
       FormsModule,
@@ -23,7 +26,8 @@ import { HomeCardsComponent } from './homeCards/homeCards.component';
       MaterialModule,
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      FontAwesomeModule
    ],
    providers: [],
    bootstrap: [
