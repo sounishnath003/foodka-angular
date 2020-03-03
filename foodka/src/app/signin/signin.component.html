@@ -63,7 +63,7 @@
           <p>You are now done.</p>
           <div>
             <button mat-button (click)="stepper.reset()">Reset</button>
-            <button mat-button>Submit</button>
+            <button mat-button (click)="onSubmit()" >Submit</button>
           </div>
         </div>
       </mat-step>
