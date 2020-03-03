@@ -8,12 +8,14 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FoodSearchComponent } from './foodSearch/foodSearch.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HomeCardsComponent } from './homeCards/homeCards.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavbarComponent,
-      FoodSearchComponent
+      FoodSearchComponent,
+      HomeCardsComponent
    ],
    imports: [
       FormsModule,
