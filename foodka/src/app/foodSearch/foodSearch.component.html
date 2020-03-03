@@ -1,11 +1,12 @@
-<div class="h-auto bg-green-200 p-8 w-full">
-  <div class="mt-20 mx-auto text-center text-3xl ">
+<div class="h-auto p-8 w-full" style="background: url('../../assets/foodsearch.svg'); background-size: auto 800px; height: 410px; background-position: center; " >
+  <div class="relative">
+    <div class=" mt-12 mx-auto text-center text-3xl ">
     Your favourite food, delivered with
     <br />
     Foodka
   </div>
   <div class="mt-12">
-    <div class="flex flex-wrap flex-row md:flex-col justify-center">
+    <div class="flex mb-10 flex-wrap flex-row md:flex-col justify-center">
       <div class="text-center mr-12">
         <form class="example-form">
           <mat-form-field class="example-full-width">
@@ -14,7 +15,7 @@
               color="secondary"
               type="text"
               placeholder="Enter delivery address"
-              aria-label="Number"
+              aria-label="Number"s
               matInput
               [formControl]="myControl"
               [matAutocomplete]="auto"
@@ -36,5 +37,6 @@
         </button>
       </div>
     </div>
+  </div>
   </div>
 </div>
