@@ -1,3 +1,72 @@
-<p>
-  signin works!
-</p>
+<div class="max-w-3xl mx-auto p-8 rounded-lg shadow-lg mt-8">
+  <div class="div p-4 rounded-lg border border-black ">
+    <div class="mx-auto m-auto">
+      <div class="text-3xl text-center text-indigo-600 ">FoodKa</div>
+      <div class="text-2xl text-center text-black">Sign in</div>
+      <div class="text-xs text-center text-gray-800 ">
+        to continue to <b class="p-1 bg-yellow-300">Foodka</b>
+      </div>
+    </div>
+
+    <mat-horizontal-stepper class="max-w-3xl mt-8 mx-auto m-auto" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field  class="width">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+            <mat-error
+              *ngIf="firstFormGroup.controls['firstCtrl'].errors?.required"
+              >Field is empty!</mat-error
+            >
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your email address</ng-template>
+          <mat-form-field class="width">
+            <mat-label>Email Address</mat-label>
+            <input
+              class="width"
+              matInput
+              formControlName="secondCtrl"
+              placeholder="foodka@example.com"
+              required
+            />
+            <mat-error
+              *ngIf="secondFormGroup.controls['secondCtrl'].errors?.required"
+              >Field is empty!</mat-error
+            >
+            <mat-error
+              *ngIf="secondFormGroup.controls['secondCtrl'].errors?.email"
+              >Type email correctly!</mat-error
+            >
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="mt-4">
+          <p>You are now done.</p>
+          <div>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-button>Submit</button>
+          </div>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>
