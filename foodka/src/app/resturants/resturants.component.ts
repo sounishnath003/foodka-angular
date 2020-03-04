@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { UserAuthService } from "../services/userAuth.service";
+import { ResturantsDetailsService } from '../services/resturants-details.service';
 
 @Component({
   selector: "app-resturants",
@@ -9,7 +10,12 @@ import { UserAuthService } from "../services/userAuth.service";
 export class ResturantsComponent implements OnInit {
   username: string;
 
-  constructor(private _userAuthdata: UserAuthService) {}
+  constructor(
+    private _userAuthdata: UserAuthService,
+    private _resturantsData: ResturantsDetailsService
+  ) {
+    console.log(this._resturantsData.getResturantsData()[0]);
+  }
 
   ngOnInit() {
     this._userAuthdata.currentUser.subscribe(
