@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: "app-foodSearch",
@@ -7,8 +7,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ["./foodSearch.component.css"]
 })
 export class FoodSearchComponent implements OnInit {
-  myControl = new FormControl();
-  options: string[] = ["Kolkata", "Mumbai", "Delhi", "Chennai", "Bangalore", "Jaipur"];
+  myControl = new FormControl("", [
+    Validators.required,
+    Validators.pattern(/^[A-Za-z]+$/)
+  ]);
+  options: string[] = [
+    "Kolkata",
+    "Mumbai",
+    "Delhi",
+    "Chennai",
+    "Bangalore",
+    "Jaipur"
+  ];
 
   constructor() {}
 

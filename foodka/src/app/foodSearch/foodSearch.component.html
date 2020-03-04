@@ -20,6 +20,8 @@
               [formControl]="myControl"
               [matAutocomplete]="auto"
             />
+            <mat-error *ngIf="myControl.errors?.required">Enter location</mat-error>
+            <mat-error *ngIf="myControl.errors?.pattern">Not a corect location</mat-error>
             <mat-autocomplete #auto="matAutocomplete">
               <mat-option *ngFor="let option of options" [value]="option">
                 {{ option }}
