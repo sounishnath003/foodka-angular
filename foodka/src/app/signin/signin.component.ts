@@ -24,16 +24,18 @@ export class SigninComponent implements OnInit {
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: [
         "",
-        Validators.required,
-        Validators.pattern("/^[a-z0-9_-]{3,16}$/gim")
+        [Validators.required, Validators.pattern("^[a-zA-Z]+[-'s]?[a-zA-Z ]+$")]
       ]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: [
         "",
-        Validators.required,
-        Validators.email,
-        Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+        [
+          Validators.required,
+          Validators.pattern(
+            /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+          )
+        ]
       ]
     });
 
