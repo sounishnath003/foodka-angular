@@ -1,9 +1,25 @@
 <div>
   <app-resturantNavbar [loggedUserName]="username" ></app-resturantNavbar>
 </div>
-
-<div class="mt-20">
-  <div class="text-xl">{{ username }}</div>
-
-  <div class="text-xl">Hello Foodka</div>
+<div>
+  <div class="flex bg-gray-100 flex-wrap flex-col md:flex-row justify-between mx-auto p-1 shadow-lg ">
+    <div class="text-center ml-8 flex">
+      <div><img src="../../assets/mobile.svg" alt="mobile" class="w-10 m-auto"></div>
+      <div class="text m-auto ">Get Help</div>
+    </div>
+    <div class="text-center flex flex-row mr-8 flex-wrap justify-evenly ">
+      <div class="text-center flex m-auto mr-3">
+        <div><img src="../../assets/cart.svg" alt="mobile" class="w-10 m-auto"></div>
+        <div class="m-auto ">Order Food</div>
+      </div>
+      <div class="text-center flex m-auto mr-3">
+        <div><img src="../../assets/book-a-table.svg" alt="mobile" class="w-10 m-auto"></div>
+        <div class="m-auto">Book a Table</div>
+      </div>
+      <div class="text-center flex m-auto">
+        <div><img src="../../assets/gold.svg" alt="mobile" class="w-8 m-auto"></div>
+        <div class="m-auto">Foodka Gold</div>
+      </div>
+    </div>
+  </div>
 </div>
