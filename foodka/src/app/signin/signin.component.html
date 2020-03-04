@@ -49,11 +49,12 @@
               >Field is empty!</mat-error
             >
             <mat-error
-              *ngIf="secondFormGroup.controls['secondCtrl'].errors?.email"
+            class="mb-2"
+              *ngIf="secondFormGroup.controls['secondCtrl'].errors"
               >Type email correctly!</mat-error
             >
           </mat-form-field>
-          <div>
+          <div class="mt-3">
             <button mat-button matStepperPrevious>Back</button>
             <button mat-raised-button color="primary" matStepperNext>
               Next
@@ -69,7 +70,7 @@
             <button mat-button (click)="stepper.reset()">Reset</button>
             <button
               mat-button
-              [disabled]="firstFormGroup.controls['firstCtrl'].errors?.pristine"
+              [disabled]="firstFormGroup.controls['firstCtrl'].errors || secondFormGroup.controls['secondCtrl'].errors  "
               (click)="onSubmit()"
             >
               Submit
@@ -81,7 +82,11 @@
   </div>
 
   <div class="mt-4 justify-evenly flex flex-wrap mx-auto">
-    <div>Forget password</div>
-    <div class="text-indigo-600">Create an acoount</div>
+    <div class="rounded-lg mx-auto m-auto hover:bg-yellow-400 transition-colors duration-200 " >
+      <div class="p-2 cursor-pointer" >Forget password</div>
+    </div>
+    <div class="text-indigo-600 mx-auto m-auto cursor-pointer">
+      <span class="underline" > <span class="text-black no-underline">New to Foodka?</span> Create an acoount </span>
+    </div>
   </div>
 </div>
