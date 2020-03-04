@@ -62,6 +62,8 @@ export class SigninComponent implements OnInit {
 
     this._userAuthdata.updateUserData(_username);
 
-    this.openSnackBar("You'll be successfully logged in ", "UNDO");
+    setTimeout(() => {
+      this.openSnackBar("You're successfully logged in ", "UNDO");
+    }, 1010);
   };
 }
