@@ -13,17 +13,21 @@
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Fill out your name</ng-template>
           <mat-form-field class="width">
-            <mat-label>Name</mat-label>
+            <mat-label>Enter Name</mat-label>
             <input
             type="text"
               matInput
-              placeholder="Last name, First name"
+              placeholder="Sounish Nath"
               formControlName="firstCtrl"
               required
             />
             <mat-error
               *ngIf="firstFormGroup.controls['firstCtrl'].errors?.required"
               >Field is empty!</mat-error
+            >
+            <mat-error
+              *ngIf="firstFormGroup.controls['firstCtrl'].errors?.pattern"
+              >no special characters!</mat-error
             >
           </mat-form-field>
           <div>
@@ -51,6 +55,11 @@
               >Field is empty!</mat-error
             >
             <mat-error
+            <mat-error
+              *ngIf="secondFormGroup.controls['secondCtrl'].errors?.pattern"
+              >Email is incorrect!</mat-error
+            >
+            <mat-error
             class="mb-2"
               *ngIf="secondFormGroup.controls['secondCtrl'].errors"
               >Type email correctly!</mat-error
@@ -71,6 +80,7 @@
           <div>
             <button mat-button (click)="stepper.reset()">Reset</button>
             <button
+            [routerLink]="['/resturants']" routerLinkActive="router-link-active" 
               mat-button
               [disabled]="firstFormGroup.controls['firstCtrl'].errors || secondFormGroup.controls['secondCtrl'].errors  "
               (click)="onSubmit()"

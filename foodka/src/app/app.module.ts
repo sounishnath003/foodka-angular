@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
+import { ResturantsComponent } from './resturants/resturants.component';
 
 @NgModule({
    declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
       HomeCardsComponent,
       FooterComponent,
       SigninComponent,
-      HomeComponent
+      HomeComponent,
+      ResturantsComponent
    ],
    imports: [
       FormsModule,
