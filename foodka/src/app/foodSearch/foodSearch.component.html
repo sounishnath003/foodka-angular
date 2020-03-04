@@ -1,44 +1,57 @@
-<div class="h-auto bg-grad-movee p-8 w-full" style="background: url('../../assets/foodsearch.svg'); background-size: auto 800px; height: 410px; background-position: center; " >
+<div
+  class="h-auto bg-grad-movee p-8 w-full"
+  style="background: url('../../assets/foodsearch.svg'); background-size: auto 800px; height: 410px; background-position: center; "
+>
   <div class="relative">
     <div class=" mt-12 mx-auto text-center text-3xl ">
-    Your favourite food, delivered with
-    <br />
-    Foodka
-  </div>
-  <div class="mt-12">
-    <div class="flex mb-10 flex-wrap flex-row md:flex-col justify-center">
-      <div class="text-center mr-12">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Search food by location</mat-label>
-            <input
-              color="secondary"
-              type="text"
-              placeholder="Enter delivery address"
-              aria-label="Number"s
-              matInput
-              [formControl]="myControl"
-              [matAutocomplete]="auto"
-            />
-            <mat-error *ngIf="myControl.errors?.required">Enter location</mat-error>
-            <mat-error *ngIf="myControl.errors?.pattern">Not a corect location</mat-error>
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of options" [value]="option">
-                {{ option }}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="text-center ">
-        <button
-          mat-raised-button
-          class="bg-black text-white px-5 tracking-wide "
+      Your favourite food, delivered with
+      <br />
+      Foodka
+    </div>
+    <div class="mt-12">
+      <div class="flex mb-10 flex-wrap flex-row md:flex-col justify-center">
+        <div class="text-center mr-12">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Search food by location</mat-label>
+              <input
+                color="secondary"
+                type="text"
+                placeholder="Enter delivery address"
+                aria-label="Number"
+                s
+                matInput
+                [formControl]="myControl"
+                [matAutocomplete]="auto"
+              />
+              <mat-error *ngIf="myControl.errors?.required"
+                >Enter location</mat-error
+              >
+              <mat-error *ngIf="myControl.errors?.pattern"
+                >Not a corect location</mat-error
+              >
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+        </div>
+        <div
+        [class]="myControl.valid? 'availBtn' : 'notAvailBtn' "
+          [routerLink]="['/login']"
+          routerLinkActive="router-link-active"
+          class="text-center "
         >
-          Find Food
-        </button>
+          <button
+            mat-raised-button
+            class="bg-black text-white px-5 tracking-wide "
+          >
+            Find Food
+          </button>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>

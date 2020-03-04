@@ -30,3 +30,11 @@
     50%{background-position:79% 100%}
     100%{background-position:22% 0%}
 }
+
+.availBtn {
+  pointer-events: all;
+}
+
+.notAvailBtn {
+  pointer-events: none;
+}
