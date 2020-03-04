@@ -15,6 +15,7 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { ResturantsComponent } from './resturants/resturants.component';
 import { UserAuthService } from './services/userAuth.service';
+import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturantNavbar.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,8 @@ import { UserAuthService } from './services/userAuth.service';
       FooterComponent,
       SigninComponent,
       HomeComponent,
-      ResturantsComponent
+      ResturantsComponent,
+      ResturantNavbarComponent
    ],
    imports: [
       FormsModule,
