@@ -1,0 +1,32 @@
+.example-form {
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.bg-grad-move {
+  -webkit-animation: move 3s ease infinite ;
+  -moz-animation: move 3s ease infinite ;
+  animation: move 3s ease infinite ;
+}
+
+@-webkit-keyframes move {
+    0%{background-position:22% 0%}
+    50%{background-position:79% 100%}
+    100%{background-position:22% 0%}
+}
+@-moz-keyframes move {
+    0%{background-position:22% 0%}
+    50%{background-position:79% 100%}
+    100%{background-position:22% 0%}
+}
+@keyframes move {
+    0%{background-position:22% 0%}
+    50%{background-position:79% 100%}
+    100%{background-position:22% 0%}
+}
