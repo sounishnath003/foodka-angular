@@ -19,7 +19,7 @@
   <div class="text-center md:mr10 mr-4 ">
     <mat-form-field >
       <mat-label class="width">Delivery Time</mat-label>
-      <mat-select>
+      <mat-select class="no-underline">
         <mat-option *ngFor="let timinf of timmings" [value]="timinf.value">
           <mat-icon class="mat-18">{{timinf.icon}}</mat-icon>
           {{ timinf.value }}
@@ -27,9 +27,9 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div class="text-center">
-    <form class="example-form">
-  <mat-form-field class="example-full-width">
+  <div class="text-center mx-auto">
+    <form class="example-form mx-auto">
+  <mat-form-field class="example-full-width mx-auto">
     <mat-label>Search</mat-label>
     <input type="search" matInput placeholder="Biryani Kabab">
     <mat-icon matSuffix>search</mat-icon>
@@ -37,5 +37,9 @@
 </form>
 
   </div>
-  <div class="text-center"></div>
+  <div class="text-center mx-auto">
+    <div class="mx-auto mt-4 m-auto">
+      {{ loggedUserName }}
+    </div>
+  </div>
 </div>

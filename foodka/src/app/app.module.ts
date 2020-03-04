@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ResturantsComponent } from './resturants/resturants.component';
 import { UserAuthService } from './services/userAuth.service';
 import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturantNavbar.component';
+import { AddressDeliverTimeService } from './services/addressDeliverTime.service';
 
 @NgModule({
    declarations: [
@@ -39,7 +40,8 @@ import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturant
       FontAwesomeModule
    ],
    providers: [
-      UserAuthService
+      UserAuthService,
+      AddressDeliverTimeService
    ],
    bootstrap: [
       AppComponent

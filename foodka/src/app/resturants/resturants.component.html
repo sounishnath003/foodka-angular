@@ -1,5 +1,9 @@
 <div>
-    <app-resturantNavbar></app-resturantNavbar>
+  <app-resturantNavbar [loggedUserName]="username" ></app-resturantNavbar>
 </div>
 
-<div class="text-xl">Hello Foodka </div>
+<div class="mt-20">
+  <div class="text-xl">{{ username }}</div>
+
+  <div class="text-xl">Hello Foodka</div>
+</div>

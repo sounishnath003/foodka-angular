@@ -10,7 +10,6 @@ const routes: Routes = [
   {path: 'index', pathMatch: "full", redirectTo: '/'},
   {path: '', component: HomeComponent},
   {path: 'login', component: SigninComponent },
-  {path: 'resturants',  pathMatch: "full",  component: ResturantNavbarComponent },
   {path: 'resturants', component: ResturantsComponent }
 ];
 

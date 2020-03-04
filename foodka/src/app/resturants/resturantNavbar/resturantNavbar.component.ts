@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 export interface Address {
   icon: string;
@@ -17,6 +17,8 @@ export interface DeliveryTime {
   styleUrls: ["./resturantNavbar.component.css"]
 })
 export class ResturantNavbarComponent implements OnInit {
+  @Input() loggedUserName: string = 'sounish';
+
   public addresses: Address[] = [
     {
       icon: "home",
