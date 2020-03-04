@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { ResturantsComponent } from './resturants/resturants.component';
+import { UserAuthService } from './services/userAuth.service';
 
 @NgModule({
    declarations: [
@@ -35,7 +36,9 @@ import { ResturantsComponent } from './resturants/resturants.component';
       BrowserAnimationsModule,
       FontAwesomeModule
    ],
-   providers: [],
+   providers: [
+      UserAuthService
+   ],
    bootstrap: [
       AppComponent
    ]

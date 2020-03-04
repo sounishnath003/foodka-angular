@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { UserAuthService } from "../services/userAuth.service";
 
 @Component({
   selector: "app-resturants",
@@ -6,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ["./resturants.component.css"]
 })
 export class ResturantsComponent implements OnInit {
-  userObj: string;
+  username: string;
 
-  constructor() {}
+  constructor(private _userAuthdata: UserAuthService) {}
 
-  ngOnInit() {}
-
-  onSignin = (evenObject: string) => {
-    this.userObj = evenObject;
-  };
+  ngOnInit() {
+    this._userAuthdata.currentUser.subscribe(
+      message => (this.username = message)
+    );
+  }
 }
