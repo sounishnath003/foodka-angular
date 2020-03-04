@@ -30,10 +30,12 @@ export class SigninComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: [
         "",
-[        Validators.required,
-        Validators.pattern(
-          /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-        )]
+        [
+          Validators.required,
+          Validators.pattern(
+            /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+          )
+        ]
       ]
     });
 
