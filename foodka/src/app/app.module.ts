@@ -18,6 +18,7 @@ import { UserAuthService } from './services/userAuth.service';
 import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturantNavbar.component';
 import { AddressDeliverTimeService } from './services/addressDeliverTime.service';
 import { ResturantsDetailsService } from './services/resturants-details.service';
+import { ResturantDetailsComponent } from './resturants/resturant-details/resturant-details.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +30,8 @@ import { ResturantsDetailsService } from './services/resturants-details.service'
       SigninComponent,
       HomeComponent,
       ResturantsComponent,
-      ResturantNavbarComponent
+      ResturantNavbarComponent,
+      ResturantDetailsComponent
    ],
    imports: [
       FormsModule,
