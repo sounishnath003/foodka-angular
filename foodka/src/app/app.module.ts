@@ -22,6 +22,7 @@ import { ResturantDetailsComponent } from './resturants/resturant-details/restur
 import { MatDialog } from '@angular/material/dialog';
 import { ScheduleDateComponent } from './scheduleDate/scheduleDate.component';
 import { SnackbarrService } from './services/snackbarr.service';
+import { OrderHistoryComponent } from './orderHistory/orderHistory.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -34,7 +35,8 @@ import { SnackbarrService } from './services/snackbarr.service';
       ResturantsComponent,
       ResturantNavbarComponent,
       ResturantDetailsComponent,
-      ScheduleDateComponent
+      ScheduleDateComponent,
+      OrderHistoryComponent
    ],
    imports: [
       FormsModule,
@@ -53,7 +55,8 @@ import { SnackbarrService } from './services/snackbarr.service';
       SnackbarrService
    ],
    entryComponents: [
-      ScheduleDateComponent
+      ScheduleDateComponent,
+      OrderHistoryComponent
    ],
    bootstrap: [
       AppComponent

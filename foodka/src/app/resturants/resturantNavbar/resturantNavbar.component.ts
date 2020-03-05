@@ -5,6 +5,7 @@ import { ScheduleDateComponent } from "src/app/scheduleDate/scheduleDate.compone
 import { Address } from "src/app/models/address";
 import { DeliveryTime } from "src/app/models/deliveryTime";
 import { SnackbarrService } from 'src/app/services/snackbarr.service';
+import { OrderHistoryComponent } from 'src/app/orderHistory/orderHistory.component';
 
 @Component({
   selector: "app-resturantNavbar",
@@ -47,9 +48,15 @@ export class ResturantNavbarComponent implements OnInit {
     }
   };
 
+  orderHistory = () => {
+    this._matDialog.open(OrderHistoryComponent, {
+      width: '820px'
+    })
+  };
+
   onLoggedOut() {
     setTimeout(() => {
-      this._snackBar._snackBarPOP("You're succesfully logged out ", "DONE")
+      this._snackBar._snackBarPOP("You're succesfully logged out ", "DONE");
     }, 1100);
-  };
+  }
 }
