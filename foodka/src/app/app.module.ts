@@ -23,6 +23,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ScheduleDateComponent } from './scheduleDate/scheduleDate.component';
 import { SnackbarrService } from './services/snackbarr.service';
 import { OrderHistoryComponent } from './orderHistory/orderHistory.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
    declarations: [
       AppComponent,
@@ -45,7 +47,8 @@ import { OrderHistoryComponent } from './orderHistory/orderHistory.component';
       BrowserModule,
       AppRoutingModule,
       BrowserAnimationsModule,
-      FontAwesomeModule
+      FontAwesomeModule,
+      ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
    ],
    providers: [
       MatDialog,
