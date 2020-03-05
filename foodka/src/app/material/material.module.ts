@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatCheckboxModule } from "@angular/material/checkbox";
@@ -72,9 +73,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgxMaterialTimepickerModule.setLocale('in')
   ],
   exports: [
+    NgxMaterialTimepickerModule,
     MatNativeDateModule,
     MatDialogModule,
     BrowserModule,

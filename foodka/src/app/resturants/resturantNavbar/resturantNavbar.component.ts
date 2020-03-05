@@ -23,19 +23,24 @@ export class ResturantNavbarComponent implements OnInit {
     this.timmings = this._addressDeliveryService.getTimmings();
   }
 
-  openDialog = () => {
-    const diaLogRef = this._matDialog.open(ScheduleDateComponent, {
-      width: '400px',
-      data: {
-          scheduleSlot: this.scheduleSlot, 
-          loggedUserName: this.loggedUserName 
-        }
-    });
+  openDialog = (index: number) => {
+      if(index == 1) {
+        const diaLogRef = this._matDialog.open(ScheduleDateComponent, {
+          width: '400px',
+          data: {
+              scheduleSlot: this.scheduleSlot, 
+              loggedUserName: this.loggedUserName 
+            }
+        });
 
-    // diaLogRef.afterClosed().subscribe((res) => {
-    //   this.scheduleSlot = res
-    // })
-
+        diaLogRef.afterClosed().subscribe((res) => {
+          this.scheduleSlot = res
+          console.log(this.scheduleSlot);
+          
+        })
+      }else{
+        return 
+      }
   }
 
 
