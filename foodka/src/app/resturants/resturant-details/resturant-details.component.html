@@ -77,12 +77,13 @@
           </ul>
     </div>
   </section>
-  <section class="food-nav mt-4 border-gray-300 border-b-2  ">
+  
+  <!-- <section class="food-nav mt-4 border-gray-300 border-b-2  ">
     <ul class="flex justify-evenly">
       <a>
         <li>Overview</li>
       </a>
-      <a [routerLink]="[ '/food']" class="active">
+      <a [routerLink]="[ '/resturants/resturant-details/food']" class="active">
         <li>Order Online</li>
       </a>
       <a>
@@ -95,7 +96,9 @@
         <li>Menu</li>
       </a>
     </ul>
-  </section>
+  </section> -->
+
+
   <section>
     <div class="all_details flex mt-4 relative">
       <div class="left-sidebar pl-4 pr-20 w-64 bg-gray-100 rounded-md">
@@ -109,9 +112,13 @@
           <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Desserts</li>
         </ul>
       </div>
-      <div class="right-sidebar ml-3 w-full bg-red-200">
+      <div class="right-sidebar ml-3 w-full">
         <div class="px-4 py-4">
-          <router-outlet></router-outlet>
+            <mat-tab-group color="warn" >
+              <mat-tab label="First" > Content 1 </mat-tab>
+              <mat-tab label="Second"> Content 2 </mat-tab>
+              <mat-tab label="Third"> Content 3 </mat-tab>
+          </mat-tab-group>
         </div>
       </div>
     </div>
