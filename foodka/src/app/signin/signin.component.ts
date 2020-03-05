@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { UserAuthService } from "../services/userAuth.service";
+import { SnackbarrService } from '../services/snackbarr.service';
 
 @Component({
   selector: "app-signin",
@@ -16,8 +17,8 @@ export class SigninComponent implements OnInit {
 
   constructor(
     public _formBuilder: FormBuilder,
-    private _snackbar: MatSnackBar,
-    private _userAuthdata: UserAuthService
+    private _userAuthdata: UserAuthService,
+    private _snackBar: SnackbarrService
   ) {}
 
   ngOnInit() {
@@ -44,14 +45,6 @@ export class SigninComponent implements OnInit {
     );
   }
 
-  open; //import {MatSnackBar} from '@angular/material';
-  //constructor(public snackBar: MatSnackBar) {}
-  openSnackBar(message: string, action: string) {
-    this._snackbar.open(message, action, {
-      duration: 1500,
-      panelClass: "blue"
-    });
-  }
 
   onSubmit = () => {
     let _username: string = this.firstFormGroup.controls["firstCtrl"].value;
@@ -63,7 +56,7 @@ export class SigninComponent implements OnInit {
     this._userAuthdata.updateUserData(_username);
 
     setTimeout(() => {
-      this.openSnackBar("You're successfully logged in ", "UNDO");
+      this._snackBar._snackBarPOP("You're successfully logged in 🎉 ", "UNDO");
     }, 1010);
   };
 }

@@ -9,3 +9,17 @@
   max-width: 420px;
   width: 100%;
 }
+
+
+.text-foodka-red {
+    color: #fc8181;
+}
+.text-foodka-red-hover:hover {
+    color: #fc8181;
+}
+.text-foodka-golden {
+    color: #efb10d;
+}
+.text-foodka-golden-hover:hover {
+    color: #efb10d;
+}

@@ -21,6 +21,7 @@ import { ResturantsDetailsService } from './services/resturants-details.service'
 import { ResturantDetailsComponent } from './resturants/resturant-details/resturant-details.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ScheduleDateComponent } from './scheduleDate/scheduleDate.component';
+import { SnackbarrService } from './services/snackbarr.service';
 @NgModule({
    declarations: [
       AppComponent,
@@ -49,6 +50,7 @@ import { ScheduleDateComponent } from './scheduleDate/scheduleDate.component';
       UserAuthService,
       AddressDeliverTimeService,
       ResturantsDetailsService,
+      SnackbarrService
    ],
    entryComponents: [
       ScheduleDateComponent

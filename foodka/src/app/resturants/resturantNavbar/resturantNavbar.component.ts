@@ -4,6 +4,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { ScheduleDateComponent } from "src/app/scheduleDate/scheduleDate.component";
 import { Address } from "src/app/models/address";
 import { DeliveryTime } from "src/app/models/deliveryTime";
+import { SnackbarrService } from 'src/app/services/snackbarr.service';
 
 @Component({
   selector: "app-resturantNavbar",
@@ -11,14 +12,15 @@ import { DeliveryTime } from "src/app/models/deliveryTime";
   styleUrls: ["./resturantNavbar.component.css"]
 })
 export class ResturantNavbarComponent implements OnInit {
-  @Input() loggedUserName: string = "sounish";
+  @Input() loggedUserName: string;
   public addresses: Address[];
   public timmings: DeliveryTime[];
   scheduleSlot: string = "";
 
   constructor(
     private _addressDeliveryService: AddressDeliverTimeService,
-    private _matDialog: MatDialog
+    private _matDialog: MatDialog,
+    private _snackBar: SnackbarrService
   ) {}
 
   ngOnInit() {
@@ -43,5 +45,11 @@ export class ResturantNavbarComponent implements OnInit {
     } else {
       return;
     }
+  };
+
+  onLoggedOut() {
+    setTimeout(() => {
+      this._snackBar._snackBarPOP("You're succesfully logged out ", "DONE")
+    }, 1100);
   };
 }
