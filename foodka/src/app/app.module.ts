@@ -19,7 +19,8 @@ import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturant
 import { AddressDeliverTimeService } from './services/addressDeliverTime.service';
 import { ResturantsDetailsService } from './services/resturants-details.service';
 import { ResturantDetailsComponent } from './resturants/resturant-details/resturant-details.component';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ScheduleDateComponent } from './scheduleDate/scheduleDate.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -31,7 +32,8 @@ import { ResturantDetailsComponent } from './resturants/resturant-details/restur
       HomeComponent,
       ResturantsComponent,
       ResturantNavbarComponent,
-      ResturantDetailsComponent
+      ResturantDetailsComponent,
+      ScheduleDateComponent
    ],
    imports: [
       FormsModule,
@@ -43,9 +45,13 @@ import { ResturantDetailsComponent } from './resturants/resturant-details/restur
       FontAwesomeModule
    ],
    providers: [
+      MatDialog,
       UserAuthService,
       AddressDeliverTimeService,
-      ResturantsDetailsService
+      ResturantsDetailsService,
+   ],
+   entryComponents: [
+      ScheduleDateComponent
    ],
    bootstrap: [
       AppComponent

@@ -1,0 +1,37 @@
+import { ElementRef, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
+import { NgxMaterialTimepickerComponent } from '../ngx-material-timepicker.component';
+import { ControlValueAccessor } from '@angular/forms';
+import { DateTime } from 'luxon';
+export declare class TimepickerDirective implements ControlValueAccessor, OnDestroy, OnChanges {
+    private elementRef;
+    private locale;
+    format: number;
+    private _format;
+    min: string | DateTime;
+    private _min;
+    max: string | DateTime;
+    private _max;
+    timepicker: NgxMaterialTimepickerComponent;
+    private _timepicker;
+    value: string;
+    private _value;
+    disabled: boolean;
+    disableClick: boolean;
+    private timepickerSubscriptions;
+    private previousFormat;
+    onTouched: () => void;
+    private onChange;
+    constructor(elementRef: ElementRef, locale: string);
+    readonly element: any;
+    private defaultTime;
+    updateValue(value: string): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    onClick(event: any): void;
+    writeValue(value: string): void;
+    registerOnChange(fn: (value: any) => void): void;
+    registerOnTouched(fn: () => void): void;
+    setDisabledState(isDisabled: boolean): void;
+    ngOnDestroy(): void;
+    private registerTimepicker;
+    private updateInputValue;
+}

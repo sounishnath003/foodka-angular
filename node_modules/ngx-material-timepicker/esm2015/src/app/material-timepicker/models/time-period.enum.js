@@ -1,0 +1,6 @@
+export var TimePeriod;
+(function (TimePeriod) {
+    TimePeriod["AM"] = "AM";
+    TimePeriod["PM"] = "PM";
+})(TimePeriod || (TimePeriod = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGltZS1wZXJpb2QuZW51bS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC1tYXRlcmlhbC10aW1lcGlja2VyLyIsInNvdXJjZXMiOlsic3JjL2FwcC9tYXRlcmlhbC10aW1lcGlja2VyL21vZGVscy90aW1lLXBlcmlvZC5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBTixJQUFZLFVBR1g7QUFIRCxXQUFZLFVBQVU7SUFDbEIsdUJBQVMsQ0FBQTtJQUNULHVCQUFTLENBQUE7QUFDYixDQUFDLEVBSFcsVUFBVSxLQUFWLFVBQVUsUUFHckIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBUaW1lUGVyaW9kIHtcbiAgICBBTSA9ICdBTScsXG4gICAgUE0gPSAnUE0nXG59XG4iXX0=

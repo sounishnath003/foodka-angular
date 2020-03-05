@@ -1,0 +1,17 @@
+<h2 mat-dialog-title >Hola! {{data.loggedUserName}} </h2>
+
+<mat-dialog-content>
+  <p>What's your favourite Timeslot?</p>
+  <mat-form-field>
+    <mat-label>Schedule your Time</mat-label>
+    <!-- <input type="date" matInput [(ngModel)]="data.scheduleSlot" > -->
+    <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close cdkFocusInitial >Save</button>
+  <button mat-button mat-dialog-close >No Thanks</button>
+</mat-dialog-actions>

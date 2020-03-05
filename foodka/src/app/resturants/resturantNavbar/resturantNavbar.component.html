@@ -20,9 +20,11 @@
     <mat-form-field appearance="fill" >
       <mat-label class="width">Delivery Time</mat-label>
       <mat-select class="no-underline">
-        <mat-option *ngFor="let timinf of timmings" [value]="timinf.value">
-          <mat-icon class="mat-18">{{timinf.icon}}</mat-icon>
-          {{ timinf.value }}
+        <mat-option *ngFor="let timinf of timmings"  [value]="timinf.value">
+          <div (click)="openDialog()" >
+            <mat-icon class="mat-18">{{timinf.icon}}</mat-icon>
+            {{ timinf.value }}
+          </div>
         </mat-option>
       </mat-select>
     </mat-form-field>

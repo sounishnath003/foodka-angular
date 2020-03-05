@@ -1,0 +1,36 @@
+import { EventEmitter, OnChanges, SimpleChanges, TemplateRef } from '@angular/core';
+import { TimePeriod } from '../../models/time-period.enum';
+import { TimeUnit } from '../../models/time-unit.enum';
+import { ClockFaceTime } from '../../models/clock-face-time.interface';
+import { DateTime } from 'luxon';
+export declare class NgxMaterialTimepickerDialComponent implements OnChanges {
+    private locale;
+    timeUnit: typeof TimeUnit;
+    hours: ClockFaceTime[];
+    minutes: ClockFaceTime[];
+    meridiems: string[];
+    isHintVisible: boolean;
+    editableHintTmpl: TemplateRef<Node>;
+    hour: number | string;
+    minute: number | string;
+    format: number;
+    period: TimePeriod;
+    activeTimeUnit: TimeUnit;
+    minTime: DateTime;
+    maxTime: DateTime;
+    isEditable: boolean;
+    minutesGap: number;
+    hoursOnly: boolean;
+    periodChanged: EventEmitter<TimePeriod>;
+    timeUnitChanged: EventEmitter<TimeUnit>;
+    hourChanged: EventEmitter<ClockFaceTime>;
+    minuteChanged: EventEmitter<ClockFaceTime>;
+    constructor(locale: string);
+    ngOnChanges(changes: SimpleChanges): void;
+    changeTimeUnit(unit: TimeUnit): void;
+    changePeriod(period: TimePeriod): void;
+    changeHour(hour: ClockFaceTime): void;
+    changeMinute(minute: ClockFaceTime): void;
+    showHint(): void;
+    hideHint(): void;
+}
