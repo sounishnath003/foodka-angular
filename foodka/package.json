@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host=192.168.1.4 & ngtw watch",
+    "start": "ng serve --open & ngtw watch",
     "build": "ngtw build && ng build",
     "test": "ng test",
     "lint": "ng lint",
