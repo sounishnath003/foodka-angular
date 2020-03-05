@@ -9,6 +9,7 @@ import { ResturantsDetailsService } from '../services/resturants-details.service
 })
 export class ResturantsComponent implements OnInit {
   username: string;
+  resturants: {} ;
 
   constructor(
     private _userAuthdata: UserAuthService,
@@ -21,5 +22,8 @@ export class ResturantsComponent implements OnInit {
     this._userAuthdata.currentUser.subscribe(
       message => (this.username = message)
     );
+
+    this.resturants =  this._resturantsData.getResturantsData()
+
   }
 }
