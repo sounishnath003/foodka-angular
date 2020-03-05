@@ -17,6 +17,7 @@ import { ResturantsComponent } from './resturants/resturants.component';
 import { UserAuthService } from './services/userAuth.service';
 import { ResturantNavbarComponent } from './resturants/resturantNavbar/resturantNavbar.component';
 import { AddressDeliverTimeService } from './services/addressDeliverTime.service';
+import { ResturantsDetailsService } from './services/resturants-details.service';
 
 @NgModule({
    declarations: [
@@ -41,7 +42,8 @@ import { AddressDeliverTimeService } from './services/addressDeliverTime.service
    ],
    providers: [
       UserAuthService,
-      AddressDeliverTimeService
+      AddressDeliverTimeService,
+      ResturantsDetailsService
    ],
    bootstrap: [
       AppComponent
