@@ -2,18 +2,95 @@
 
 <div class="container mx-auto">
   <p class="text-sm font-light text-gray-600 py-4">
-    Home / India / {{ data.address.city }} / {{ data.address.area }} / <strong class=" text-gray-800 ">{{data.resturantName}}</strong> 
+    Home / India / {{ data.address.city }} / {{ data.address.area }} /
+    <strong class=" text-gray-800 ">{{ data.resturantName }}</strong>
   </p>
   <section>
     <div class="banner">
       <div class="img_col_1">
         <div class="_img1">
-          <img class="__img1" src="https://b.zmtcdn.com/data/pictures/0/18354590/03c1ca9eab52d48571a730f50f0db355.jpg?output-format=webp" alt="">
+          <img
+            class="__img1 rounded-md"
+            src="https://b.zmtcdn.com/data/pictures/0/18354590/03c1ca9eab52d48571a730f50f0db355.jpg?output-format=webp"
+            alt=""
+          />
         </div>
       </div>
-      <div class="img_col_2">
-        
+      <div class="img_col_2 flex flex-col justify-between mx-1">
+        <div class="img2_1 ">
+          <img
+            class="rounded-md"
+            src="https://b.zmtcdn.com/data/reviews_photos/bab/850fabeb79ff3e60fefb67c52c8a8bab_1552909678.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+            alt=""
+          />
+        </div>
+        <div class="img2_2">
+          <img
+            class="rounded-md"
+            src="https://b.zmtcdn.com/data/reviews_photos/32a/0e3b105450312008e507da24e416d32a_1544272487.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="img_col_3 flex flex-col justify-between mx-1">
+        <div class="img2_1">
+          <img
+            class="rounded-md"
+            src="https://b.zmtcdn.com/data/reviews_photos/bab/850fabeb79ff3e60fefb67c52c8a8bab_1552909678.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+            alt=""
+          />
+        </div>
+        <div class="img2_2">
+          <img
+            class="rounded-md"
+            src="https://b.zmtcdn.com/data/reviews_photos/32a/0e3b105450312008e507da24e416d32a_1544272487.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+            alt=""
+          />
+        </div>
       </div>
     </div>
+  </section>
+
+  <section class="details px-1 pt-4">
+    <div class="flex justify-between">
+      <div class="details-text">
+        <h1 class="text-3xl ">{{ data.resturantName }}</h1>
+        <p class="text-gray-700">
+          {{ data.about.bio }} -
+          <span *ngFor="let item of data.about.foodType">{{ item }}</span>
+        </p>
+        <p class="text-gray-600 text-lg">{{ data.address.area }}</p>
+        <p class="text-red-600 pt-2 text-md">
+          {{ data.currentStatus }} - <span class="text-gray-800"> {{data.time.opening}} - {{data.time.closing}} [{{data.time.days}}] </span>
+        </p>
+      </div>
+      <div class="rating">
+        <p class="text-2xl bg-teal-400 p-2 rounded-sm">{{ data.about.rating }}</p>
+      </div>
+    </div>
+        <div class="py-4">
+          <ul class="flex">
+            <li class="bg-red-500 text-md px-3 text-white py-2 cursor-pointer hover:shadow-md mr-1 rounded-md">🎀 ADD Review</li>
+            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">🚀 Direction</li>
+            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">📌 Bookmark</li>
+            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">✋ Share</li>
+          </ul>
+    </div>
+  </section>
+  <section class="food-nav">
+    <ul>
+      <a href="">
+        <li></li>
+      </a>
+      <a href="">
+        <li></li>
+      </a>
+      <a href="">
+        <li></li>
+      </a>
+      <a href="">
+        <li></li>
+      </a>
+    </ul>
   </section>
 </div>

@@ -6,9 +6,8 @@ section
 .banner
 {
   display: flex;
-  height: 28rem;
+  height: 24rem;
   width: 100%;
-  background: rgb(255, 143, 143);
 }
 .img_col_1
 {
@@ -35,10 +34,19 @@ section
     object-fit: cover;
     transform: none;
     opacity: 1;
-    border-radius: 2px;
     transition: 0.5s all ease-in-out;
 }
 .__img1:hover
 {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+.img_col_2,.img_col_3
+{
+    width: 18%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+

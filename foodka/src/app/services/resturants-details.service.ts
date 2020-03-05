@@ -17,14 +17,14 @@ export class ResturantsDetailsService {
         rating: "3.6",
         votes: "1396 votes",
         bio: "Casual Dining",
-        foodType: ["Biryani", "North Indian", "Mughlai", "Chinese", "Bengali"]
+        foodType: ["Biryani, ", "North Indian, ", "Mughlai, ", "Chinese, ", "Bengali"]
       },
       address: {
         street: "Maa Sarada Road, Noapara",
         area: "Barasat",
         city: "kolkata"
       },
-      cuurentStatus: "Open | Close",
+      currentStatus: "Open now",
       time: {
         opening: "12:30",
         closing: "12 midnight",
