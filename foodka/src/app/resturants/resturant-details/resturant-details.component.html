@@ -61,65 +61,139 @@
         </p>
         <p class="text-gray-600 text-lg">{{ data.address.area }}</p>
         <p class="text-red-600 pt-2 text-md">
-          {{ data.currentStatus }} - <span class="text-gray-800"> {{data.time.opening}} - {{data.time.closing}} [{{data.time.days}}] </span>
+          {{ data.currentStatus }} -
+          <span class="text-gray-800">
+            {{ data.time.opening }} - {{ data.time.closing }} [{{
+              data.time.days
+            }}]
+          </span>
         </p>
       </div>
       <div class="rating">
-        <p class="text-2xl bg-teal-400 p-2 rounded-sm">{{ data.about.rating }}</p>
+        <p class="text-2xl bg-teal-400 p-2 rounded-sm">
+          {{ data.about.rating }}
+        </p>
       </div>
     </div>
-        <div class="py-4">
-          <ul class="flex">
-            <li class="bg-red-500 text-md px-3 text-white py-2 cursor-pointer hover:shadow-md mr-1 rounded-md">🎀 Add Review</li>
-            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">🚀 Direction</li>
-            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">📌 Bookmark</li>
-            <li class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md">✋ Share</li>
-          </ul>
+    <div class="py-4">
+      <ul class="flex">
+        <li
+          class="bg-red-500 text-md px-3 text-white py-2 cursor-pointer hover:shadow-md mr-1 rounded-md"
+        >
+          🎀 Add Review
+        </li>
+        <li
+          class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md"
+        >
+          🚀 Direction
+        </li>
+        <li
+          class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md"
+        >
+          📌 Bookmark
+        </li>
+        <li
+          class="border-red-500 border-2 text-md px-3 py-2 cursor-pointer hover:shadow-md mx-1 rounded-md"
+        >
+          ✋ Share
+        </li>
+      </ul>
     </div>
   </section>
-  
-  <!-- <section class="food-nav mt-4 border-gray-300 border-b-2  ">
-    <ul class="flex justify-evenly">
-      <a>
-        <li>Overview</li>
-      </a>
-      <a [routerLink]="[ '/resturants/resturant-details/food']" class="active">
-        <li>Order Online</li>
-      </a>
-      <a>
-        <li>Photo</li>
-      </a>
-      <a >
-        <li>Review</li>
-      </a>
-      <a>
-        <li>Menu</li>
-      </a>
-    </ul>
-  </section> -->
-
-
   <section>
     <div class="all_details flex mt-4 relative">
       <div class="left-sidebar pl-4 pr-20 w-64 bg-gray-100 rounded-md">
         <ul>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Bestsellers</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Restaurant Recomm</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Student's Combo</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Soups</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Starter</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Rice</li>
-          <li class="py-3 px-4 hover:text-teal-600 cursor-pointer">Desserts</li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">
+            Bestsellers
+          </li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">
+            Restaurant Recomm
+          </li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">
+            Student's Combo
+          </li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Soups</li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Starter</li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Rice</li>
+          <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Desserts</li>
         </ul>
       </div>
       <div class="right-sidebar ml-3 w-full">
-        <div class="px-4 py-4">
-            <mat-tab-group color="warn" >
-              <mat-tab label="First" > Content 1 </mat-tab>
-              <mat-tab label="Second"> Content 2 </mat-tab>
-              <mat-tab label="Third"> Content 3 </mat-tab>
-          </mat-tab-group>
-        </div>
+        <section>
+          <div class="px-4 py-4">
+            <mat-tab-group color="warn">
+              <mat-tab label="Overview" >Overview Content </mat-tab>
+              <mat-tab label="Order Online">
+                <div class="m-2">
+                  <div class="flex w-full flex-wrap flex-row justify-between">
+                    <div class="m-auto flex flex-col flex-wrap text-center">
+                        <div class="text-2xl text-left ">Order Online</div>
+                        <div class="flex flex-wrap flex-row">
+                          <div class="text-left mr-2 m-auto text-gray-600 text-sm ">  
+                            🕑 Live track your order clock 
+                          </div>
+                          <div class="text-left mr-2 m-auto"> | </div>
+                          <div class="text-left mr-2 text-gray-500 m-auto"> 42 mins  </div>
+                        </div>
+                    </div>
+                    <div class="m-auto text-center">
+                      <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Search by menus</mat-label>
+                          <input
+                            type="text"
+                            matInput
+                            placeholder="Chicken Biryani"
+                          />
+                          <mat-icon matSuffix>search</mat-icon>
+                        </mat-form-field>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <div class="p-2 text-white bg-google-blue rounded-lg">
+                      <div class="ml-3 font-sans "> 🏁 Delivering food to <span class="font-bold " >Barasat, Kolkata</span> </div>   
+                    </div>
+                  </div>
+
+                  <div class="mt-4 mb-4">
+                    <div class="flex flex-row flex-wrap justify-evenly">
+                      <div class="text-center border rounded-lg ">
+                        <div class="flex flex-row flex-wrap justify-between">
+                          <div class="m-auto w-6 text-red-500 m-1 "><div>40% OFF</div></div>
+                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use FOODKA <br> to avail offer </div>
+                        </div>
+                      </div>
+                       <div class="text-center border rounded-lg ">
+                        <div class="flex flex-row flex-wrap justify-between">
+                          <div class="m-auto w-6 text-red-500 m-1 "><div>10% OFF</div></div>
+                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> On orders <br> worth ₹149 and ... </div>
+                        </div>
+                      </div>
+                       <div class="text-center border rounded-lg ">
+                        <div class="flex flex-row flex-wrap justify-between">
+                          <div class="m-auto w-6 text-red-500 m-1 "><div>₹200 CB</div></div>
+                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use code AMEX200 <br> to Avail... </div>
+                        </div>
+                      </div>
+                       <div class="text-center border rounded-lg ">
+                        <div class="flex flex-row flex-wrap justify-between">
+                          <div class="m-auto w-6 text-red-500 m-1 "><div>30% OFF</div></div>
+                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use code <br> HOLIPARTY to ava... </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </mat-tab>
+              <mat-tab label="Photos" > Photos Content </mat-tab>
+              <mat-tab label="Reviews"> Reviews Content </mat-tab>
+              <mat-tab label="Menus"> Menus Content </mat-tab>
+            </mat-tab-group>
+          </div>
+        </section>
       </div>
     </div>
   </section>

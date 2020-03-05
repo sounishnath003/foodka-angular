@@ -57,3 +57,74 @@ section
   border-bottom: 4px solid rgb(255, 71, 71);
 }
 
+
+
+.bg-google-blue {
+  background-color: #2781e7;
+}
+
+
+.iOpgEZ {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(54, 54, 54, 0.06) 0px 1px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(232, 232, 232);
+    border-image: initial;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+.fNPadO {
+    margin-left: 1.4rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: rgb(79, 79, 79);
+    text-align: center;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+
+.bUUmtn {
+    width: 5rem;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: rgb(245, 112, 130);
+    text-align: center;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+
+.gzysFy {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 1.4rem;
+    margin-left: 5.1rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    box-shadow: rgb(255, 255, 255) 0px 5px 0px;
+}
+
+
+.coupon-clip {
+  clip-path: polygon(53% 6%, 100% 0, 100% 100%, 50% 94%, 0 100%, 0 0);
+}
