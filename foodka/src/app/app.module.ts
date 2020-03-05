@@ -25,44 +25,47 @@ import { SnackbarrService } from './services/snackbarr.service';
 import { OrderHistoryComponent } from './orderHistory/orderHistory.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      FoodSearchComponent,
-      HomeCardsComponent,
-      FooterComponent,
-      SigninComponent,
-      HomeComponent,
-      ResturantsComponent,
-      ResturantNavbarComponent,
-      ResturantDetailsComponent,
-      ScheduleDateComponent,
-      OrderHistoryComponent
-   ],
-   imports: [
-      FormsModule,
-      ReactiveFormsModule,
-      MaterialModule,
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      FontAwesomeModule,
-      ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-   ],
-   providers: [
-      MatDialog,
-      UserAuthService,
-      AddressDeliverTimeService,
-      ResturantsDetailsService,
-      SnackbarrService
-   ],
-   entryComponents: [
-      ScheduleDateComponent,
-      OrderHistoryComponent
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    FoodSearchComponent,
+    HomeCardsComponent,
+    FooterComponent,
+    SigninComponent,
+    HomeComponent,
+    ResturantsComponent,
+    ResturantNavbarComponent,
+    ResturantDetailsComponent,
+    ScheduleDateComponent,
+    OrderHistoryComponent,
+    OfferDetailsComponent
+  ],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production
+    })
+  ],
+  providers: [
+    MatDialog,
+    UserAuthService,
+    AddressDeliverTimeService,
+    ResturantsDetailsService,
+    SnackbarrService
+  ],
+  entryComponents: [
+    ScheduleDateComponent,
+    OrderHistoryComponent,
+    OfferDetailsComponent
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

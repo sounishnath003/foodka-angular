@@ -123,19 +123,23 @@
         <section>
           <div class="px-4 py-4">
             <mat-tab-group color="warn">
-              <mat-tab label="Overview" >Overview Content </mat-tab>
+              <mat-tab label="Overview">Overview Content </mat-tab>
               <mat-tab label="Order Online">
                 <div class="m-2">
                   <div class="flex w-full flex-wrap flex-row justify-between">
                     <div class="m-auto flex flex-col flex-wrap text-center">
-                        <div class="text-2xl text-left ">Order Online</div>
-                        <div class="flex flex-wrap flex-row">
-                          <div class="text-left mr-2 m-auto text-gray-600 text-sm ">  
-                            🕑 Live track your order clock 
-                          </div>
-                          <div class="text-left mr-2 m-auto"> | </div>
-                          <div class="text-left mr-2 text-gray-500 m-auto"> 42 mins  </div>
+                      <div class="text-2xl text-left ">Order Online</div>
+                      <div class="flex flex-wrap flex-row">
+                        <div
+                          class="text-left mr-2 m-auto text-gray-600 text-sm "
+                        >
+                          🕑 Live track your order clock
                         </div>
+                        <div class="text-left mr-2 m-auto">|</div>
+                        <div class="text-left mr-2 text-gray-500 m-auto">
+                          42 mins
+                        </div>
+                      </div>
                     </div>
                     <div class="m-auto text-center">
                       <form class="example-form">
@@ -153,42 +157,80 @@
                   </div>
                   <div class="mt-4">
                     <div class="p-2 text-white bg-google-blue rounded-lg">
-                      <div class="ml-3 font-sans "> 🏁 Delivering food to <span class="font-bold " >Barasat, Kolkata</span> </div>   
+                      <div class="ml-3 font-sans ">
+                        🏁 Delivering food to
+                        <span class="font-bold ">Barasat, Kolkata</span>
+                      </div>
                     </div>
                   </div>
 
                   <div class="mt-4 mb-4">
                     <div class="flex flex-row flex-wrap justify-evenly">
-                      <div class="text-center border rounded-lg ">
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>40% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use FOODKA <br />
+                              to avail offer
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>10% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              On orders <br />
+                              worth ₹149 and ...
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                      <button (click)="openOfferDeatails()" >
+                        <div class="text-center border rounded-lg ">
                         <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 "><div>40% OFF</div></div>
-                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use FOODKA <br> to avail offer </div>
+                          <div class="m-auto w-6 text-red-500 m-1 ">
+                            <div>₹200 CB</div>
+                          </div>
+                          <div
+                            class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                          >
+                            Use code AMEX200 <br />
+                            to Avail...
+                          </div>
                         </div>
                       </div>
-                       <div class="text-center border rounded-lg ">
+                      </button>
+                      <button (click)="openOfferDeatails()" >
+                        <div class="text-center border rounded-lg ">
                         <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 "><div>10% OFF</div></div>
-                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> On orders <br> worth ₹149 and ... </div>
+                          <div class="m-auto w-6 text-red-500 m-1 ">
+                            <div>30% OFF</div>
+                          </div>
+                          <div
+                            class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                          >
+                            Use code <br />
+                            HOLIPARTY to ava...
+                          </div>
                         </div>
                       </div>
-                       <div class="text-center border rounded-lg ">
-                        <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 "><div>₹200 CB</div></div>
-                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use code AMEX200 <br> to Avail... </div>
-                        </div>
-                      </div>
-                       <div class="text-center border rounded-lg ">
-                        <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 "><div>30% OFF</div></div>
-                          <div class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"> Use code <br> HOLIPARTY to ava... </div>
-                        </div>
-                      </div>
+                      </button>
                     </div>
                   </div>
-
                 </div>
               </mat-tab>
-              <mat-tab label="Photos" > Photos Content </mat-tab>
+              <mat-tab label="Photos"> Photos Content </mat-tab>
               <mat-tab label="Reviews"> Reviews Content </mat-tab>
               <mat-tab label="Menus"> Menus Content </mat-tab>
             </mat-tab-group>
