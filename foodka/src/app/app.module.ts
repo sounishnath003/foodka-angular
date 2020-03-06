@@ -26,6 +26,7 @@ import { OrderHistoryComponent } from './orderHistory/orderHistory.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
+import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodCard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
     ResturantDetailsComponent,
     ScheduleDateComponent,
     OrderHistoryComponent,
-    OfferDetailsComponent
+    OfferDetailsComponent,
+    FoodCardComponent
   ],
   imports: [
     FormsModule,

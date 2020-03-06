@@ -1,12 +1,63 @@
 .text-foodka-red {
-    color: #cb202d;
+  color: #cb202d;
 }
 .text-foodka-red-hover:hover {
-    color: #cb202d;
+  color: #cb202d;
 }
 .text-foodka-golden {
-    color: #efb10d;
+  color: #efb10d;
 }
 .text-foodka-golden-hover:hover {
-    color: #efb10d;
+  color: #efb10d;
+}
+
+.offer-clippath {
+  clip-path: polygon(50% 0%, 100% 0, 86% 48%, 100% 100%, 0 100%, 12% 47%, 0 0);
+  background: #fe8c00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f83600,
+    #fe8c00
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f83600,
+    #fe8c00
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.blink-1 {
+  -webkit-animation: blink-1 0.6s both;
+  animation: blink-1 0.6s both;
+}
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.text-gradiant {
+  /* font-size: 72px; */
+  font-size: 1rem;
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: -webkit-linear-gradient( #7b4397, #dc2430);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

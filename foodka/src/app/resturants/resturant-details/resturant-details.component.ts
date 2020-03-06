@@ -6,8 +6,9 @@ import { OfferDetailsComponent } from 'src/app/offerDetails/offerDetails.compone
 @Component({
   selector: "app-resturant-details",
   templateUrl: "./resturant-details.component.html",
-  styleUrls: ["./resturant-details.component.css"]
+  styleUrls: ["./resturant-details.component.css"],
 })
+
 export class ResturantDetailsComponent implements OnInit {
   data: any = {};
   constructor(private _resturantData: ResturantsDetailsService, private _openDialog: MatDialog ) {

@@ -229,9 +229,9 @@
       <!-- resturants-details -->
 
       <div class="text-center w-full mb-3 mx-3 ">
-        <div class="p-2 rounded-lg bg-white shadow-xl">
+        <div class="">
           <div class="flex flex-wrap flex-col justify-evenly " >
-            <div *ngFor="let resturant of resturants" >
+            <div *ngFor="let resturant of resturants" class="mb-8 p-2 cursor-pointer rounded-lg bg-white shadow-xl " >
                 <div class="flex text-center flex-wrap flex-col md:flex-row justify-evenly ">
                 <div class="text-center m-auto">
                   <img [src]="resturant.imgUrl" alt="foos1" class="h-32 rounded-lg " />
@@ -251,7 +251,7 @@
                     {{resturant.address.street}}, {{resturant.address.area}}
                   </div>
                 </div>
-                <div class="text-center md:block hidden m-auto">
+                <div class="text-center  flex-col flex md:block hidden m-auto">
                   <mat-chip-list>
                     <mat-chip color="primary" selected> {{resturant.about.rating}} ⭐ </mat-chip>
                   </mat-chip-list>
@@ -276,6 +276,7 @@
                     <div class="text-left text-sm ">Newly Opened</div>
                   </div>
                 </div>
+                <div class="m-auto max-w-md "><div class="m-2 bg-yellow-400 offer-clippath text-white rounded-lg"> {{resturant.discount}} </div></div>
                 <div class="mt-4 text-center mb-1 "><hr></div>
                   <div class="flex flex-wrap md:flex-row bg-gray-100 rounded-lg justify-evenly flex-col">
                     <div class="text-left cursor-pointer mt-2  text-indigo-700 p-2 flex justify-around">
