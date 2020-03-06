@@ -230,75 +230,77 @@
 
       <div class="text-center w-full mb-3 mx-3 ">
         <div class="p-2 rounded-lg bg-white shadow-xl">
-          <div class="flex flex-wrap flex-col justify-evenly " *ngFor="let resturant of resturants" >
-            <div class="flex text-center flex-wrap flex-col md:flex-row justify-evenly ">
-            <div class="text-center m-auto">
-              <img [src]="resturant.imgUrl" alt="foos1" class="h-32 rounded-lg " />
-            </div>
-            <div class="text-center m-auto text-2xl text-foodka-red">
-              <div class="text-foodka-golden uppercase text-xs text-left ">
-                sponsored
-              </div>
-              <div class="text-sm flex flex-row flex-wrap text-left text-gray-600"  >
-                {{resturant.about.bio}}
-              </div>
-              <div class="text-left">{{ resturant.resturantName }}</div>
-              <div class="text-left md:block hidden text-sm text-black ">
-                {{resturant.address.area}}, {{resturant.address.city}}
-              </div>
-              <div class="text-left md:block hidden text-xs text-blue-700 ">
-                {{resturant.address.street}}, {{resturant.address.area}}
-              </div>
-            </div>
-            <div class="text-center md:block hidden m-auto">
-              <mat-chip-list>
-                <mat-chip color="primary" selected> {{resturant.about.rating}} ⭐ </mat-chip>
-              </mat-chip-list>
-            </div>
-          </div>
-          <div class="mt-4 text-center mb-4 "><hr></div>
-          <div class="text-left md:flex hidden flex flex-wrap flex-row justify-evenly  ">
-            <div class="flex flex-wrap md:block flex-col col-wrap justify-evenly">
-              <div class="text-left text-gray-600 text-sm uppercase ">Cruisine: </div>
-              <div class="text-left text-gray-600 text-sm uppercase ">cost for two: </div>
-              <div class="text-left text-gray-600 text-sm uppercase ">hours: </div>
-              <div class="text-left text-gray-600 text-sm uppercase ">featured in: </div>
-            </div>
-            <div class="flex flex-wrap flex-col col-wrap justify-evenly">
-              <div class="text-left flex flex-row flex-wrap text-sm ">
-                <div *ngFor="let foodTyp of resturant.about.foodType" >
-                  {{ foodTyp }}  
+          <div class="flex flex-wrap flex-col justify-evenly " >
+            <div *ngFor="let resturant of resturants" >
+                <div class="flex text-center flex-wrap flex-col md:flex-row justify-evenly ">
+                <div class="text-center m-auto">
+                  <img [src]="resturant.imgUrl" alt="foos1" class="h-32 rounded-lg " />
+                </div>
+                <div class="text-center m-auto text-2xl text-foodka-red">
+                  <div class="text-foodka-golden uppercase text-xs text-left ">
+                    sponsored
+                  </div>
+                  <div class="text-sm flex flex-row flex-wrap text-left text-gray-600"  >
+                    {{resturant.about.bio}}
+                  </div>
+                  <div class="text-left">{{ resturant.resturantName }}</div>
+                  <div class="text-left md:block hidden text-sm text-black ">
+                    {{resturant.address.area}}, {{resturant.address.city}}
+                  </div>
+                  <div class="text-left md:block hidden text-xs text-blue-700 ">
+                    {{resturant.address.street}}, {{resturant.address.area}}
+                  </div>
+                </div>
+                <div class="text-center md:block hidden m-auto">
+                  <mat-chip-list>
+                    <mat-chip color="primary" selected> {{resturant.about.rating}} ⭐ </mat-chip>
+                  </mat-chip-list>
                 </div>
               </div>
-              <div class="text-left text-sm "> {{resturant.about.cost}} </div>
-              <div class="text-left text-sm ">{{resturant.time.opening}} – {{ resturant.time.closing }} ({{ resturant.time.days }})</div>
-              <div class="text-left text-sm ">Newly Opened</div>
+                <div class="mt-4 text-center mb-4 "><hr></div>
+                <div class="text-left md:flex hidden flex flex-wrap flex-row justify-evenly  ">
+                  <div class="flex flex-wrap md:block flex-col col-wrap justify-evenly">
+                    <div class="text-left text-gray-600 text-sm uppercase ">Cruisine: </div>
+                    <div class="text-left text-gray-600 text-sm uppercase ">cost for two: </div>
+                    <div class="text-left text-gray-600 text-sm uppercase ">hours: </div>
+                    <div class="text-left text-gray-600 text-sm uppercase ">featured in: </div>
+                  </div>
+                  <div class="flex flex-wrap flex-col col-wrap justify-evenly">
+                    <div class="text-left flex flex-row flex-wrap text-sm ">
+                      <div *ngFor="let foodTyp of resturant.about.foodType" >
+                        {{ foodTyp }}  
+                      </div>
+                    </div>
+                    <div class="text-left text-sm "> {{resturant.about.cost}} </div>
+                    <div class="text-left text-sm ">{{resturant.time.opening}} – {{ resturant.time.closing }} ({{ resturant.time.days }})</div>
+                    <div class="text-left text-sm ">Newly Opened</div>
+                  </div>
+                </div>
+                <div class="mt-4 text-center mb-1 "><hr></div>
+                  <div class="flex flex-wrap md:flex-row bg-gray-100 rounded-lg justify-evenly flex-col">
+                    <div class="text-left cursor-pointer mt-2  text-indigo-700 p-2 flex justify-around">
+                      <div class="text-left"><mat-icon class="mat-18">call</mat-icon></div>
+                      <div class="text-left" >Call</div>
+                    </div>
+                    <div class="text-left cursor-pointer mt-2  text-indigo-700 p-2 flex justify-around">
+                      <div class="text-left"><mat-icon class="mat-18">menu</mat-icon></div>
+                      <div class="text-left" >View Menu</div>
+                    </div>
+                    <div class="text-left cursor-pointer mt-0  text-indigo-700 p-2 flex justify-around">
+                      <div class="text-left"><mat-icon class="mat-18">office</mat-icon></div>
+                      <div class="flex flex-wrap flex-col">
+                        <div class="text-left flex " >  
+                          <img src="../../assets/cart.svg" alt="cart" class="w-8" >
+                          Book a Table</div>
+                        <div class="text-left text-xs text-green-400 " >Currently online</div>
+                      </div>
+                    </div>
+                  </div>
             </div>
-          </div>
-          <div class="mt-4 text-center mb-1 "><hr></div>
-          <div class="flex flex-wrap md:flex-row bg-gray-100 rounded-lg justify-evenly flex-col">
-            <div class="text-left cursor-pointer mt-2  text-indigo-700 p-2 flex justify-around">
-              <div class="text-left"><mat-icon class="mat-18">call</mat-icon></div>
-              <div class="text-left" >Call</div>
-            </div>
-            <div class="text-left cursor-pointer mt-2  text-indigo-700 p-2 flex justify-around">
-              <div class="text-left"><mat-icon class="mat-18">menu</mat-icon></div>
-              <div class="text-left" >View Menu</div>
-            </div>
-            <div class="text-left cursor-pointer mt-0  text-indigo-700 p-2 flex justify-around">
-              <div class="text-left"><mat-icon class="mat-18">office</mat-icon></div>
-              <div class="flex flex-wrap flex-col">
-                <div class="text-left flex " >  
-                  <img src="../../assets/cart.svg" alt="cart" class="w-8" >
-                  Book a Table</div>
-                <div class="text-left text-xs text-green-400 " >Currently online</div>
-              </div>
-            </div>
-          </div>
           </div>
         </div>
       </div>
-      <div class="text-center w-full  mx-3 ">
+      <!-- <div class="text-center w-full  mx-3 ">
         <div class="p-2 rounded-lg bg-white shadow-xl">
           <div class="flex flex-wrap flex-col justify-evenly " >
             <div class="flex text-center flex-wrap flex-col md:flex-row justify-evenly ">
@@ -363,7 +365,7 @@
           </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="text-center w-2/5">
         <div class="flex flex-col flex-wrap">
           <div class="text-center">
