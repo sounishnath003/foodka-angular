@@ -524,15 +524,15 @@ export class ResturantsDetailsService {
         }
       },
       {
-        id: 1,
-        resturantName: "Desi Bites",
+        id: 2,
+        resturantName: "Awesome Khana",
         imgUrl:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366,h_240,c_fill/j3b73pbghmzufj6uwyob",
+          "https://b.zmtcdn.com/data/pictures/9/18560739/81a57cdaf850b933c58dca14e752ebd2.jpg?output-format=webp",
         about: {
           cost: "₹2000",
           rating: "3.6",
           votes: "1396 votes",
-          bio: "Casual Dining",
+          bio: "Casual Pub, Smooked",
           foodType: [
             "Biryani, ",
             "North Indian, ",
@@ -1040,4 +1040,15 @@ export class ResturantsDetailsService {
       }
     ];
   } 
+
+
+  getResturantById = (resturantID: number) => {
+    const allResturants = this.getResturantsData() ;
+    for (const resturant of allResturants) {
+      if(resturant.id == resturantID) {
+        return resturant ;
+      }else{break;}
+    }
+  }
+
 }

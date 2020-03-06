@@ -1,0 +1,1913 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "resturantName": {
+            "type": "string"
+        },
+        "imgUrl": {
+            "type": "string"
+        },
+        "about": {
+            "type": "object",
+            "properties": {
+                "cost": {
+                    "type": "string"
+                },
+                "rating": {
+                    "type": "string"
+                },
+                "votes": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                },
+                "foodType": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "cost",
+                "rating",
+                "votes",
+                "bio",
+                "foodType"
+            ]
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "area": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "street",
+                "area",
+                "city"
+            ]
+        },
+        "currentStatus": {
+            "type": "string"
+        },
+        "time": {
+            "type": "object",
+            "properties": {
+                "opening": {
+                    "type": "string"
+                },
+                "closing": {
+                    "type": "string"
+                },
+                "days": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "opening",
+                "closing",
+                "days"
+            ]
+        },
+        "discount": {
+            "type": "string"
+        },
+        "orderOnline": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "orderStatus": {
+                    "type": "string"
+                },
+                "coupons": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "foods": {
+                    "type": "object",
+                    "properties": {
+                        "veg": {
+                            "type": "object",
+                            "properties": {
+                                "bestsellers": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "resturantRecomm": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "studentCombo": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "soups": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "starters": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "mainCourse": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "rice": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "chinese": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "desserts": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "bestsellers",
+                                "resturantRecomm",
+                                "studentCombo",
+                                "soups",
+                                "starters",
+                                "mainCourse",
+                                "rice",
+                                "chinese",
+                                "desserts"
+                            ]
+                        },
+                        "nonveg": {
+                            "type": "object",
+                            "properties": {
+                                "bestsellers": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "resturantRecomm": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "itemUrl": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "itemUrl",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "studentCombo": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "soups": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "starters": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "mainCourse": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "rice": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "chinese": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "desserts": {
+                                    "type": "array",
+                                    "items": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "itemName": {
+                                                    "type": "string"
+                                                },
+                                                "price": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "old": {
+                                                            "type": "string"
+                                                        },
+                                                        "new": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "old",
+                                                        "new"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "itemName",
+                                                "price"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "bestsellers",
+                                "resturantRecomm",
+                                "studentCombo",
+                                "soups",
+                                "starters",
+                                "mainCourse",
+                                "rice",
+                                "chinese",
+                                "desserts"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "veg",
+                        "nonveg"
+                    ]
+                }
+            },
+            "required": [
+                "title",
+                "orderStatus",
+                "coupons",
+                "foods"
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "resturantName",
+        "imgUrl",
+        "about",
+        "address",
+        "currentStatus",
+        "time",
+        "discount",
+        "orderOnline"
+    ]
+}

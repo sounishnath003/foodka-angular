@@ -1,28 +1,42 @@
 import { Component, OnInit } from "@angular/core";
 import { ResturantsDetailsService } from "../../services/resturants-details.service";
-import { MatDialog } from '@angular/material/dialog';
-import { OfferDetailsComponent } from 'src/app/offerDetails/offerDetails.component';
+import { MatDialog } from "@angular/material/dialog";
+import { OfferDetailsComponent } from "src/app/offerDetails/offerDetails.component";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-resturant-details",
   templateUrl: "./resturant-details.component.html",
-  styleUrls: ["./resturant-details.component.css"],
+  styleUrls: ["./resturant-details.component.css"]
 })
-
 export class ResturantDetailsComponent implements OnInit {
   data: any = {};
-  constructor(private _resturantData: ResturantsDetailsService, private _openDialog: MatDialog ) {
-    this.data = this._resturantData.getResturantsData()[0];
-    console.log(this.data);
+  resturantID: number;
+  allResturants: {};
+
+  constructor(
+    private _resturantData: ResturantsDetailsService,
+    private _openDialog: MatDialog,
+    private _activeRouter: ActivatedRoute
+  ) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.allResturants = this._resturantData.getResturantsData();
+    this._activeRouter.params.subscribe(res => (this.resturantID = res.id));
+    console.log(this.resturantID);
+    try {
+      this.data = this._resturantData.getResturantById(this.resturantID);
+      console.log(this.data);
+    } catch (error) {
+      console.error(error);
+    }
+    
+  }
 
   openOfferDeatails() {
     this._openDialog.open(OfferDetailsComponent, {
-      width: '420px'
-    })
-  };
-
-
+      width: "420px"
+    });
+  }
 }
