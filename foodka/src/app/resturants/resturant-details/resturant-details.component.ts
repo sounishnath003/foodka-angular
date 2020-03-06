@@ -22,6 +22,18 @@ export class ResturantDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._microServices() ;
+  }
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.data = undefined;
+    this.data = {};
+  }
+
+
+  _microServices = () => {
     this.allResturants = this._resturantData.getResturantsData();
     this._activeRouter.params.subscribe(res => (this.resturantID = res.id));
     console.log(this.resturantID);
@@ -31,8 +43,8 @@ export class ResturantDetailsComponent implements OnInit {
     } catch (error) {
       console.error(error);
     }
-    
   }
+
 
   openOfferDeatails() {
     this._openDialog.open(OfferDetailsComponent, {
