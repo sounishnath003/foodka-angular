@@ -123,7 +123,32 @@
         <section>
           <div class="px-4 py-4">
             <mat-tab-group color="warn">
-              <mat-tab label="Overview">Overview Content </mat-tab>
+              <mat-tab label="Overview">
+                
+                <div class="container">
+                  <p class="text-2xl mt-8">About this place</p>
+                  <p class="mt-10 ml-1 shadow-sm">Menus 🍽</p>
+                  <div class="my-4 p-2 inline-block rounded bg-gray-100 shadow-lg overflow-hidden">
+                    <img class="rounded block hover:cursor-pointer " src="https://b.zmtcdn.com/data/menus/590/18354590/801afdf56883bb72a94458b909f2b4b5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="">
+                  </div>
+                  <div class="pt-2">
+                    <p class="text-xl bg-red-100 py-1 px-2 rounded inline-block ">{{data.about.bio}}</p><br>
+                    <div class="mt-4">
+                      <span class="mx-1 rounded-full text-center border-gray-200 text-red-800 border py-1 px-2" *ngFor="let item of data.about.foodType">{{ item }}</span>
+                    </div>
+                  </div>
+                  <p class="my-4 text-sm bg-green-100 p-2 rounded hover:shadow-sm cursor-pointer inline-block">We have voted {{data.about.votes}} by people</p>
+                  <div class="my-4 w-64 p-4 shadow-lg">
+                    <div class="p-2">
+                      <p class="text-gray-600">Call:</p>
+                      <p class="text-red-600">+919748133415</p>
+                      <p class="text-red-600">+919748133415</p>
+                    </div>
+                    <img class="w-full py-4" src="https://maps.zomato.com/php/staticmap?center=22.7242800127,88.4828245640&maptype=zomato&markers=22.7242800127,88.4828245640,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250" alt="">
+                  </div>
+                </div>
+                
+              </mat-tab>
               <mat-tab label="Order Online">
                 <div class="m-2">
                   <div class="flex w-full flex-wrap flex-row justify-between">
