@@ -1,5 +1,5 @@
 <div>
-  <div class="bestSellers" *ngFor="let food of vegFood.bestsellers" >
+  <div class="bestSellers" *ngFor="let food of nonVegFood.bestsellers" >
     <div class="flex flex-wrap border rounded-lg p-1 mb-4 flex-col md:flex-row justify-evenly p-1 m-1 ">
       <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >
@@ -31,7 +31,7 @@
   <div class=" mb-2 mt-4 text-blue-900 ">
     <p class=" text-2xl "> Restaurant Recommend</p>
   </div>
-  <div class="resturantRecomm" *ngFor="let food of vegFood.resturantRecomm" >
+  <div class="resturantRecomm" *ngFor="let food of nonVegFood.resturantRecomm" >
     <div class="flex flex-wrap border rounded-lg p-1 mb-4 flex-col md:flex-row justify-evenly p-1 m-1 ">
       <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >
@@ -63,7 +63,7 @@
   <div class=" mb-2 mt-4 text-blue-900 ">
     <p class=" text-2xl "> Student's Combo</p>
   </div>
-  <div class="studentCombo" *ngFor="let food of vegFood.studentCombo" >
+  <div class="studentCombo" *ngFor="let food of nonVegFood.studentCombo" >
     <div class="flex border p-4 rounded-lg p-1 mb-4 flex-col md:flex-row justify-between p-1 m-1 ">
       <!-- <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >
@@ -95,7 +95,7 @@
   <div class=" mb-2 mt-4 text-blue-900 ">
     <p class=" text-2xl "> Soups</p>
   </div>
-  <div class="soups" *ngFor="let food of vegFood.soups" >
+  <div class="soups" *ngFor="let food of nonVegFood.soups" >
     <div class="flex border p-4 rounded-lg p-1 mb-4 flex-col md:flex-row justify-between p-1 m-1 ">
       <!-- <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >
@@ -127,7 +127,7 @@
   <div class=" mb-2 mt-4 text-blue-900 ">
     <p class=" text-2xl "> Starters</p>
   </div>
-  <div class="starters" *ngFor="let food of vegFood.starters" >
+  <div class="starters" *ngFor="let food of nonVegFood.starters" >
     <div class="flex border p-4 rounded-lg p-1 mb-4 flex-col md:flex-row justify-between p-1 m-1 ">
       <!-- <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >
@@ -159,7 +159,7 @@
   <div class=" mb-2 mt-4 text-blue-900 ">
     <p class=" text-2xl "> MainCourse</p>
   </div>
-  <div class="mainCourse" *ngFor="let food of vegFood.mainCourse" >
+  <div class="mainCourse" *ngFor="let food of nonVegFood.mainCourse" >
     <div class="flex border p-4 rounded-lg p-1 mb-4 flex-col md:flex-row justify-between p-1 m-1 ">
       <!-- <div class="text-left m-auto">
         <img [src]="food.itemUrl" alt="foodcard"  class="w-24 rounded-lg mr-3" >

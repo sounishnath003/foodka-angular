@@ -39,7 +39,7 @@ export class ResturantDetailsComponent implements OnInit {
     console.log(this.resturantID);
     try {
       this.data = this._resturantData.getResturantById(this.resturantID);
-      console.log(this.data);
+      // console.log(this.data);
     } catch (error) {
       console.error(error);
     }

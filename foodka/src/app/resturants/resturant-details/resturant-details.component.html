@@ -124,30 +124,61 @@
           <div class="px-4 py-4">
             <mat-tab-group color="warn">
               <mat-tab label="Overview">
-                
                 <div class="container">
                   <p class="text-2xl mt-8">About this place</p>
                   <p class="mt-10 ml-1 shadow-sm">Menus 🍽</p>
-                  <div class="my-4 p-2 inline-block rounded bg-gray-100 shadow-lg overflow-hidden">
-                    <img class="rounded block hover:cursor-pointer " src="https://b.zmtcdn.com/data/menus/590/18354590/801afdf56883bb72a94458b909f2b4b5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="">
+                  <div
+                    class="my-4 p-2 inline-block rounded bg-gray-100 shadow-lg overflow-hidden"
+                  >
+                    <img
+                      class="rounded block hover:cursor-pointer "
+                      src="https://b.zmtcdn.com/data/menus/590/18354590/801afdf56883bb72a94458b909f2b4b5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+                      alt=""
+                    />
                   </div>
                   <div class="pt-2">
-                    <p class="text-xl bg-red-100 py-1 px-2 rounded inline-block ">{{data.about.bio}}</p><br>
+                    <p
+                      class="text-xl bg-red-100 py-1 px-2 rounded inline-block "
+                    >
+                      {{ data.about.bio }}
+                    </p>
+                    <br />
                     <div class="mt-4">
-                      <span class="mx-1 rounded-full text-center border-gray-200 text-red-800 border py-1 px-2" *ngFor="let item of data.about.foodType">{{ item }}</span>
+                      <span
+                        class="mx-1 rounded-full text-center border-gray-200 text-red-800 border py-1 px-2"
+                        *ngFor="let item of data.about.foodType"
+                        >{{ item }}</span
+                      >
                     </div>
                   </div>
-                  <p class="my-4 text-sm bg-green-100 p-2 rounded hover:shadow-sm cursor-pointer inline-block">We have voted {{data.about.votes}} by people</p>
+                  <p
+                    class="my-4 text-sm bg-green-100 p-2 rounded hover:shadow-sm cursor-pointer inline-block"
+                  >
+                    We have voted {{ data.about.votes }} by people
+                  </p>
                   <div class="my-4 w-64 p-4 shadow-lg">
                     <div class="p-2">
                       <p class="text-gray-600">Call:</p>
                       <p class="text-red-600">+919748133415</p>
                       <p class="text-red-600">+919748133415</p>
                     </div>
-                    <img class="w-full py-4" src="https://maps.zomato.com/php/staticmap?center=22.7242800127,88.4828245640&maptype=zomato&markers=22.7242800127,88.4828245640,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250" alt="">
+                    <img
+                      class="w-full py-4"
+                      src="https://maps.zomato.com/php/staticmap?center=22.7242800127,88.4828245640&maptype=zomato&markers=22.7242800127,88.4828245640,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250"
+                      alt=""
+                    />
+                    <p>{{ data.address.street }} , {{ data.address.area }}</p>
+                    <div class="mt-3">
+                      <span class="border border-red-400 px-2 py-1 rounded-full"
+                        >✔ Copy</span
+                      >
+                      <span
+                        class="border border-red-400 ml-1 px-2 py-1 rounded-full"
+                        >🛴 Directions</span
+                      >
+                    </div>
                   </div>
                 </div>
-                
               </mat-tab>
               <mat-tab label="Order Online">
                 <div class="m-2">
@@ -221,57 +252,169 @@
                           </div>
                         </div>
                       </button>
-                      <button (click)="openOfferDeatails()" >
+                      <button (click)="openOfferDeatails()">
                         <div class="text-center border rounded-lg ">
-                        <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 ">
-                            <div>₹200 CB</div>
-                          </div>
-                          <div
-                            class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
-                          >
-                            Use code AMEX200 <br />
-                            to Avail...
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>₹200 CB</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use code AMEX200 <br />
+                              to Avail...
+                            </div>
                           </div>
                         </div>
-                      </div>
                       </button>
-                      <button (click)="openOfferDeatails()" >
+                      <button (click)="openOfferDeatails()">
                         <div class="text-center border rounded-lg ">
-                        <div class="flex flex-row flex-wrap justify-between">
-                          <div class="m-auto w-6 text-red-500 m-1 ">
-                            <div>30% OFF</div>
-                          </div>
-                          <div
-                            class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
-                          >
-                            Use code <br />
-                            HOLIPARTY to ava...
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>30% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use code <br />
+                              HOLIPARTY to ava...
+                            </div>
                           </div>
                         </div>
-                      </div>
                       </button>
                     </div>
                   </div>
                   <div class="mt-4">
-                    <mat-checkbox value="veg" color="primary">Veg only</mat-checkbox>
+                    <mat-checkbox value="veg" color="primary"
+                      >Veg only</mat-checkbox
+                    >
                   </div>
 
                   <div class="mt-4">
                     <div class="text-xl text-black">Bestsellers</div>
                   </div>
 
-                  <div class="mt-4"  >
-                      <app-foodCard></app-foodCard>
-                      <app-foodCard></app-foodCard>
-                      <app-foodCard></app-foodCard>
-                    </div>
-
+                  <div class="mt-4">
+                    <app-foodCard></app-foodCard>
+                    <!-- <app-foodCard></app-foodCard>
+                      <app-foodCard></app-foodCard> -->
+                  </div>
                 </div>
               </mat-tab>
-              <mat-tab label="Photos"> Photos Content </mat-tab>
+              <mat-tab label="Non-veg"> <div class="m-2">
+                  <div class="flex w-full flex-wrap flex-row justify-between">
+                    <div class="m-auto flex flex-col flex-wrap text-center">
+                      <div class="text-2xl text-left ">Order Online</div>
+                      <div class="flex flex-wrap flex-row">
+                        <div
+                          class="text-left mr-2 m-auto text-gray-600 text-sm "
+                        >
+                          🕑 Live track your order clock
+                        </div>
+                        <div class="text-left mr-2 m-auto">|</div>
+                        <div class="text-left mr-2 text-gray-500 m-auto">
+                          42 mins
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-auto text-center">
+                      <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Search by menus</mat-label>
+                          <input
+                            type="text"
+                            matInput
+                            placeholder="Chicken Biryani"
+                          />
+                          <mat-icon matSuffix>search</mat-icon>
+                        </mat-form-field>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <div class="p-2 text-white bg-google-blue rounded-lg">
+                      <div class="ml-3 font-sans ">
+                        🏁 Delivering food to
+                        <span class="font-bold ">Barasat, Kolkata</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 mb-4">
+                    <div class="flex flex-row flex-wrap justify-evenly">
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>40% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use FOODKA <br />
+                              to avail offer
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>10% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              On orders <br />
+                              worth ₹149 and ...
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>₹200 CB</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use code AMEX200 <br />
+                              to Avail...
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                      <button (click)="openOfferDeatails()">
+                        <div class="text-center border rounded-lg ">
+                          <div class="flex flex-row flex-wrap justify-between">
+                            <div class="m-auto w-6 text-red-500 m-1 ">
+                              <div>30% OFF</div>
+                            </div>
+                            <div
+                              class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                            >
+                              Use code <br />
+                              HOLIPARTY to ava...
+                            </div>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <mat-checkbox value="Non veg" color="primary"
+                      >Non-veg only</mat-checkbox
+                    >
+                  </div>
+                  <div class="mt-4">
+                    <app-nonVegFoodCard></app-nonVegFoodCard>
+                  </div>
+                </div></mat-tab>
               <mat-tab label="Reviews"> Reviews Content </mat-tab>
-              <mat-tab label="Menus"> Menus Content </mat-tab>
+              <mat-tab label="Photos"> Photos Content </mat-tab>
             </mat-tab-group>
           </div>
         </section>

@@ -27,6 +27,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
 import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodCard.component';
+import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFoodCard/nonVegFoodCard.component'
+  import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodC
     ScheduleDateComponent,
     OrderHistoryComponent,
     OfferDetailsComponent,
-    FoodCardComponent
+    FoodCardComponent,
+    NonVegFoodCardComponent
   ],
   imports: [
     FormsModule,
