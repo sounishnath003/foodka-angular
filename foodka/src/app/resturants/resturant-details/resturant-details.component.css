@@ -128,3 +128,13 @@ section
 .coupon-clip {
   clip-path: polygon(53% 6%, 100% 0, 100% 100%, 50% 94%, 0 100%, 0 0);
 }
+
+.menuImg
+{
+  transition: 0.4s all ease-in-out;
+}
+.menuImg:hover
+{
+  cursor: pointer;
+  transform: scale(1.1);
+}

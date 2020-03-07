@@ -11,7 +11,7 @@
         <div class="_img1">
           <img
             class="__img1 rounded-md"
-            src="https://b.zmtcdn.com/data/pictures/0/18354590/03c1ca9eab52d48571a730f50f0db355.jpg?output-format=webp"
+            [src]="data.imgUrl"
             alt=""
           />
         </div>
@@ -131,8 +131,8 @@
                     class="my-4 p-2 inline-block rounded bg-gray-100 shadow-lg overflow-hidden"
                   >
                     <img
-                      class="rounded block hover:cursor-pointer "
-                      src="https://b.zmtcdn.com/data/menus/590/18354590/801afdf56883bb72a94458b909f2b4b5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+                      class="rounded block hover:cursor-pointer menuImg "
+                      [src]="data.menuImgUrl"
                       alt=""
                     />
                   </div>

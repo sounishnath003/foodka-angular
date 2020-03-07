@@ -10,14 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 export class NonVegFoodCardComponent implements OnInit {
   data: any = {};
   nonVegFood: any = {};
+  id:number;
+
   constructor(
     private _foodData: ResturantsDetailsService,
     private _ActivatedRoute: ActivatedRoute
   ) {
     this._ActivatedRoute.params.subscribe(param=>{
-      // console.log(param)
+      this.id = param.id;
     })
-    this.data = this._foodData.getResturantsData()[0];
+    this.data = this._foodData.getResturantsData()[--this.id];
     this.nonVegFood = this.data.foods.nonveg;
   }
   ngOnInit() {}
