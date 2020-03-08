@@ -30,6 +30,7 @@ import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodC
 import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFoodCard/nonVegFoodCard.component'
   import { from } from 'rxjs';
 import { CurrentOrderComponent } from './resturants/resturant-details/currentOrder/currentOrder.component';
+import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +73,8 @@ import { CurrentOrderComponent } from './resturants/resturant-details/currentOrd
     ScheduleDateComponent,
     OrderHistoryComponent,
     OfferDetailsComponent,
-    CurrentOrderComponent
+    CurrentOrderComponent,
+    PlaceOrderComponent
   ],
   bootstrap: [AppComponent]
 })
