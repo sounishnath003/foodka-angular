@@ -31,6 +31,7 @@ import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFood
   import { from } from 'rxjs';
 import { CurrentOrderComponent } from './resturants/resturant-details/currentOrder/currentOrder.component';
 import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
+import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
     FoodCardComponent,
     NonVegFoodCardComponent,
     CurrentOrderComponent,
-    PlaceOrderComponent
+    PlaceOrderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     FormsModule,

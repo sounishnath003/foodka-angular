@@ -3,8 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { SigninComponent } from "./signin/signin.component";
 import { HomeComponent } from "./home/home.component";
 import { ResturantsComponent } from "./resturants/resturants.component";
-import { ResturantNavbarComponent } from "./resturants/resturantNavbar/resturantNavbar.component";
 import { ResturantDetailsComponent } from "./resturants/resturant-details/resturant-details.component";
+import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 
 const routes: Routes = [
   { path: "index", pathMatch: "full", redirectTo: "/" },
@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: "resturants/resturant-details/:id",
     component: ResturantDetailsComponent
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
