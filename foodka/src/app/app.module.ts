@@ -29,6 +29,7 @@ import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
 import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodCard.component';
 import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFoodCard/nonVegFoodCard.component'
   import { from } from 'rxjs';
+import { CurrentOrderComponent } from './resturants/resturant-details/currentOrder/currentOrder.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFood
     OrderHistoryComponent,
     OfferDetailsComponent,
     FoodCardComponent,
-    NonVegFoodCardComponent
+    NonVegFoodCardComponent,
+    CurrentOrderComponent
   ],
   imports: [
     FormsModule,
@@ -57,7 +59,7 @@ import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFood
     FontAwesomeModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
-    })
+    }),
   ],
   providers: [
     MatDialog,
@@ -69,7 +71,8 @@ import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFood
   entryComponents: [
     ScheduleDateComponent,
     OrderHistoryComponent,
-    OfferDetailsComponent
+    OfferDetailsComponent,
+    CurrentOrderComponent
   ],
   bootstrap: [AppComponent]
 })

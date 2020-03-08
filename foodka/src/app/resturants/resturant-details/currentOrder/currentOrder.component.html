@@ -1,6 +1,31 @@
-<mat-nav-list>
-  <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
-    <span mat-line>Google Keep</span>
-    <span mat-line>Add to a note</span>
-  </a>
-</mat-nav-list>
+<div *ngFor="let orderFood of orderedFoods; let i = index;  " >
+  <mat-nav-list>
+    <a mat-list-item (click)="openLink($event)">
+      <div class="flex flex-wrap flex-row justify-between m-1">
+        <div class="text-left m-auto">
+          <div class="flex flex-wrap">
+            <p><span matBadge="addClick" mat-line>{{ orderFood.itemName }}</span></p>
+            mat-badg
+            <div  class="text-red-600 ml-3 flex" >  
+             <div (click)="addItem(i)" class="div mr-2">➕</div> 
+             <div (click)="deleteItem(i)" class="div mr-2">➖</div> 
+            </div>
+          </div>
+          <span mat-line > {{ orderFood.price.new }} </span>
+          <!-- <span mat-line> {{ data.itemCount }} </span>  -->
+        </div>
+      </div>
+    </a>
+  </mat-nav-list>
+</div>
+
+
+<div>
+  <span mat-line> total items: {{ data.itemCount }} </span> 
+</div>
+
+<div>
+  <div class="text-xl" *ngIf="total >= 0">
+    SubTotal: ₹ {{ total }}
+  </div>
+</div>
