@@ -27,7 +27,7 @@ export class CurrentOrderComponent implements OnInit {
 
   ngOnInit() {
     this.orderedFoods = FoodCardComponent._totalOrderedFoods;
-    let amt = this.orderedFoods[this.data.itemCount -1 ].price.new;
+    let amt = this.orderedFoods[this.data.itemCount - 1].price.new;
     amt = amt.replace("₹", 0);
     CurrentOrderComponent.sum = CurrentOrderComponent.sum + parseFloat(amt);
 
