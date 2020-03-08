@@ -48,7 +48,8 @@ import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
     OfferDetailsComponent,
     FoodCardComponent,
     NonVegFoodCardComponent,
-    CurrentOrderComponent
+    CurrentOrderComponent,
+    PlaceOrderComponent
   ],
   imports: [
     FormsModule,

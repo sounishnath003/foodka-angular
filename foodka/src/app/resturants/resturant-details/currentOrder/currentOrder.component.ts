@@ -1,8 +1,11 @@
-import { Component, OnInit, Inject, SimpleChanges } from '@angular/core';
-import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
-import { FoodCardComponent } from '../foodCard/foodCard.component';
-import { MatDialog } from '@angular/material/dialog';
-import { PlaceOrderComponent } from 'src/app/placeOrder/placeOrder.component';
+import { Component, OnInit, Inject, SimpleChanges } from "@angular/core";
+import {
+  MatBottomSheetRef,
+  MAT_BOTTOM_SHEET_DATA
+} from "@angular/material/bottom-sheet";
+import { FoodCardComponent } from "../foodCard/foodCard.component";
+import { MatDialog } from "@angular/material/dialog";
+import { PlaceOrderComponent } from "src/app/placeOrder/placeOrder.component";
 
 @Component({
   selector: "app-currentOrder",
@@ -66,6 +69,9 @@ export class CurrentOrderComponent implements OnInit {
   }
 
   placeOrder() {
-    this._matDialog.open(PlaceOrderComponent)
-  };
+    this._bottomSheetRef.dismiss();
+    this._matDialog.open(PlaceOrderComponent, {
+      width: "670px"
+    });
+  }
 }
