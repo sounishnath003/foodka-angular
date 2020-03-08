@@ -3,7 +3,6 @@ import { ResturantsDetailsService } from "../../services/resturants-details.serv
 import { MatDialog } from "@angular/material/dialog";
 import { OfferDetailsComponent } from "src/app/offerDetails/offerDetails.component";
 import { ActivatedRoute } from "@angular/router";
-import { UserAuthService } from 'src/app/services/userAuth.service';
 
 @Component({
   selector: "app-resturant-details",
@@ -14,41 +13,43 @@ export class ResturantDetailsComponent implements OnInit {
   data: any = {};
   resturantID: number;
   allResturants: {};
-  username: string ;
-
+  id:number;
   constructor(
     private _resturantData: ResturantsDetailsService,
     private _openDialog: MatDialog,
-    private _activeRouter: ActivatedRoute,
-    private _userAuth: UserAuthService
+    private _activeRouter: ActivatedRoute
   ) {
+    this._activeRouter.params.subscribe(param=>{
+      this.id = param.id;
+      console.log(this.id)
+    })
+    this.data = this._resturantData.getResturantsData()[--this.id]
+    console.log(this.data)
   }
 
   ngOnInit(): void {
-    this._microServices() ;
+    // this._microServices() ;
   }
 
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.data = undefined;
-    this.data = {};
-  }
+  // ngOnDestroy(): void {
+  //   //Called once, before the instance is destroyed.
+  //   //Add 'implements OnDestroy' to the class.
+  //   this.data = undefined;
+  //   this.data = {};
+  // }
 
 
-  _microServices = () => {
-    this.allResturants = this._resturantData.getResturantsData();
-    this._activeRouter.params.subscribe(res => (this.resturantID = res.id));
-    console.log(this.resturantID);
-    try {
-      this.data = this._resturantData.getResturantById(this.resturantID);
-      console.log(this.data);
-    } catch (error) {
-      console.error(error);
-    }
-
-    this._userAuth.currentUser.subscribe(message => this.username = message )    
-  }
+  // _microServices = () => {
+  //   this.allResturants = this._resturantData.getResturantsData();
+  //   this._activeRouter.params.subscribe(res => (this.resturantID = res.id));
+  //   console.log(this.resturantID);
+  //   try {
+  //     this.data = this._resturantData.getResturantById(this.resturantID);
+  //     // console.log(this.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 
 
   openOfferDeatails() {
