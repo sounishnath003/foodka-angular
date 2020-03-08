@@ -15,7 +15,7 @@ export class PlaceOrderComponent implements OnInit {
 
     setTimeout(() => {
       _matDialogRef.close();
-    }, 3400);
+    }, 5500);
   }
 
   ngOnInit() {}

@@ -1,17 +1,19 @@
-<div *ngFor="let orderFood of orderedFoods; let i = index;  " >
+<div *ngFor="let orderFood of orderedFoods; let i = index">
   <mat-nav-list>
     <a mat-list-item (click)="openLink($event)">
       <div class="flex flex-wrap flex-row justify-between m-1">
         <div class="text-left m-auto">
           <div class="flex flex-wrap">
-            <p><span matBadge="addClick" mat-line>{{ orderFood.itemName }}</span></p>
+            <p>
+              <span matBadge="addClick" mat-line>{{ orderFood.itemName }}</span>
+            </p>
             mat-badg
-            <div  class="text-red-600 ml-3 flex" >  
-             <div (click)="addItem(i)" class="div mr-2">➕</div> 
-             <div (click)="deleteItem(i)" class="div mr-2">➖</div> 
+            <div class="text-red-600 ml-3 flex">
+              <div (click)="addItem(i)" class="div mr-2">➕</div>
+              <div (click)="deleteItem(i)" class="div mr-2">➖</div>
             </div>
           </div>
-          <span mat-line > {{ orderFood.price.new }} </span>
+          <span mat-line> {{ orderFood.price.new }} </span>
           <!-- <span mat-line> {{ data.itemCount }} </span>  -->
         </div>
       </div>
@@ -19,15 +21,12 @@
   </mat-nav-list>
 </div>
 
-
 <div>
-  <span mat-line> total items: {{ data.itemCount }} </span> 
+  <span mat-line> total items: {{ data.itemCount }} </span>
 </div>
 
 <div>
-  <div class="text-xl" *ngIf="total >= 0">
-    SubTotal: ₹ {{ total }}
-  </div>
+  <div class="text-xl" *ngIf="total > -1">Sub Total: ₹ {{ total }}</div>
 </div>
 
 <div class="mt-5">
