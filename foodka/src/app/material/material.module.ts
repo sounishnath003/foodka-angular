@@ -35,6 +35,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   imports: [
@@ -74,8 +75,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSortModule,
     MatPaginatorModule,
     MatNativeDateModule,
+    MatBottomSheetModule
   ],
   exports: [
+    MatBottomSheetModule,
     MatNativeDateModule,
     MatDialogModule,
     BrowserModule,

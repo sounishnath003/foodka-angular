@@ -27,6 +27,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { OfferDetailsComponent } from './offerDetails/offerDetails.component';
 import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodCard.component';
+import { CurrentOrderComponent } from './resturants/resturant-details/currentOrder/currentOrder.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodC
     ScheduleDateComponent,
     OrderHistoryComponent,
     OfferDetailsComponent,
-    FoodCardComponent
+    FoodCardComponent,
+    CurrentOrderComponent
   ],
   imports: [
     FormsModule,
@@ -66,7 +68,8 @@ import { FoodCardComponent } from './resturants/resturant-details/foodCard/foodC
   entryComponents: [
     ScheduleDateComponent,
     OrderHistoryComponent,
-    OfferDetailsComponent
+    OfferDetailsComponent,
+    CurrentOrderComponent
   ],
   bootstrap: [AppComponent]
 })

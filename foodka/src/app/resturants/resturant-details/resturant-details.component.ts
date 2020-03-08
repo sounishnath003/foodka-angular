@@ -3,6 +3,7 @@ import { ResturantsDetailsService } from "../../services/resturants-details.serv
 import { MatDialog } from "@angular/material/dialog";
 import { OfferDetailsComponent } from "src/app/offerDetails/offerDetails.component";
 import { ActivatedRoute } from "@angular/router";
+import { UserAuthService } from 'src/app/services/userAuth.service';
 
 @Component({
   selector: "app-resturant-details",
@@ -13,11 +14,13 @@ export class ResturantDetailsComponent implements OnInit {
   data: any = {};
   resturantID: number;
   allResturants: {};
+  username: string ;
 
   constructor(
     private _resturantData: ResturantsDetailsService,
     private _openDialog: MatDialog,
-    private _activeRouter: ActivatedRoute
+    private _activeRouter: ActivatedRoute,
+    private _userAuth: UserAuthService
   ) {
   }
 
@@ -43,6 +46,8 @@ export class ResturantDetailsComponent implements OnInit {
     } catch (error) {
       console.error(error);
     }
+
+    this._userAuth.currentUser.subscribe(message => this.username = message )    
   }
 
 
