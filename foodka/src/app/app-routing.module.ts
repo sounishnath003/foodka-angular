@@ -7,6 +7,7 @@ import { ResturantDetailsComponent } from "./resturants/resturant-details/restur
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamsComponent } from './teams/teams.component';
 
 const routes: Routes = [
   { path: "index", pathMatch: "full", redirectTo: "/" },
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: "resturants/resturant-details/:id",
     component: ResturantDetailsComponent
   },
+  { path: 'our-teams', component: TeamsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

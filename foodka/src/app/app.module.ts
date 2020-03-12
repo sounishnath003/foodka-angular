@@ -34,6 +34,7 @@ import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamsComponent } from './teams/teams.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PlaceOrderComponent,
     PageNotFoundComponent,
     AdminLoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    TeamsComponent
   ],
   imports: [
     FormsModule,

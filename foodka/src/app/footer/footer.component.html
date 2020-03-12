@@ -4,7 +4,7 @@
       class="flex mb-12 flex-wrap flex-col md:flex-row justify-evenly mx-auto m-auto"
     >
       <div class="flex flex-col flex-wrap justify-between">
-        <div class="text-center text-2xl">
+        <div [routerLink]="['/']" routerLinkActive="router-link-active"  class="text-center cursor-pointer text-2xl">
           FoodKa
         </div>
         <div class="text-center text-xl">
@@ -72,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="text-center mr-10">Terms of use</div>
+          <div [routerLink]="['/our-teams']" routerLinkActive="router-link-active"  class="text-center cursor-pointer mr-10">Meet Developers Team</div>
           <div class="text-center mr-10">Pricing</div>
         </div>
       </div>

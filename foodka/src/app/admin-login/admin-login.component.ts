@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SnackbarrService } from '../services/snackbarr.service';
 
 @Component({
   selector: "app-admin-login",
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class AdminLoginComponent implements OnInit {
   uid: string = "admin";
   pwd: string = "admin";
-  constructor(private _router: Router) {}
+  constructor(private _router: Router, private _snackBar: SnackbarrService ) {}
 
   ngOnInit(): void {}
 
@@ -24,10 +25,13 @@ export class AdminLoginComponent implements OnInit {
       this.adminLogIn.get("uid").value == this.uid &&
       this.adminLogIn.get("pwd").value == this.pwd
     ) {
-      alert("You're in admin portal 🎈");
+      this._snackBar._snackBarPOP(
+        "Welcome Admin to Portal 🎉🎉",
+        "DONE"
+      );
       this._router.navigateByUrl('dashboard')
     } else {
-      alert("Admin id or Password incorrect ☹");
+      this._snackBar._snackBarPOP("Admin Id / Password is incorrect! ☹", "DONE")
     }
     console.log();
   }
