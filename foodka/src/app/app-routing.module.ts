@@ -6,13 +6,14 @@ import { ResturantsComponent } from "./resturants/resturants.component";
 import { ResturantDetailsComponent } from "./resturants/resturant-details/resturant-details.component";
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: "index", pathMatch: "full", redirectTo: "/" },
   { path: "", component: HomeComponent },
   { path: "login", component: SigninComponent },
-  { path: "adminlogin", component: AdminLoginComponent },
-  { path: "resturants", component: ResturantsComponent },
+  { path: "admin", component: AdminLoginComponent },
+  { path: "dashboard", component: DashboardComponent },
   {
     path: "resturants/resturant-details/:id",
     component: ResturantDetailsComponent

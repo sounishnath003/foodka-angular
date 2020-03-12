@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-admin-login",
@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 export class AdminLoginComponent implements OnInit {
   uid: string = "admin";
   pwd: string = "admin";
-  constructor(private _routerLink: RouterLink) {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {}
 
@@ -25,9 +25,9 @@ export class AdminLoginComponent implements OnInit {
       this.adminLogIn.get("pwd").value == this.pwd
     ) {
       alert("You're in admin portal 🎈");
+      this._router.navigateByUrl('dashboard')
     } else {
       alert("Admin id or Password incorrect ☹");
-      // this._routerLink.
     }
     console.log();
   }
