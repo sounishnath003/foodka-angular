@@ -33,6 +33,7 @@ import { CurrentOrderComponent } from './resturants/resturant-details/currentOrd
 import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     CurrentOrderComponent,
     PlaceOrderComponent,
     PageNotFoundComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    DashboardComponent
   ],
   imports: [
     FormsModule,
