@@ -5,11 +5,13 @@ import { HomeComponent } from "./home/home.component";
 import { ResturantsComponent } from "./resturants/resturants.component";
 import { ResturantDetailsComponent } from "./resturants/resturant-details/resturant-details.component";
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
   { path: "index", pathMatch: "full", redirectTo: "/" },
   { path: "", component: HomeComponent },
   { path: "login", component: SigninComponent },
+  { path: "adminlogin", component: AdminLoginComponent },
   { path: "resturants", component: ResturantsComponent },
   {
     path: "resturants/resturant-details/:id",

@@ -32,6 +32,7 @@ import {NonVegFoodCardComponent} from './resturants/resturant-details/nonVegFood
 import { CurrentOrderComponent } from './resturants/resturant-details/currentOrder/currentOrder.component';
 import { PlaceOrderComponent } from './placeOrder/placeOrder.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
     NonVegFoodCardComponent,
     CurrentOrderComponent,
     PlaceOrderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AdminLoginComponent
   ],
   imports: [
     FormsModule,
