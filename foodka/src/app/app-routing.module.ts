@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: "login", component: SigninComponent },
   { path: "admin", component: AdminLoginComponent },
   { path: "dashboard", component: DashboardComponent },
+  {path: "resturants", component: ResturantsComponent },
   {
     path: "resturants/resturant-details/:id",
     component: ResturantDetailsComponent
